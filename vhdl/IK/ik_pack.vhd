@@ -15,9 +15,28 @@ package ik_pack is
                        return std_logic_vector;
   function mat_4_to_slv (mat : mat_4)
                        return std_logic_vector;
+  component cross_product
+    port (
+      a  : in  std_logic_vector(95 downto 0);
+      b  : in  std_logic_vector(95 downto 0);
+      cp : out std_logic_vector(95 downto 0)
+    );
+  end component cross_product;
+
 end package ik_pack;
 
 package body ik_pack is
+
+function slv_to_vec_3 (slv : std_logic_vector(95 downto 0))
+                      return vec_3 is
+  variable VEC : vec_3;
+begin
+  VEC(0) := slv(95 downto 64);
+  VEC(1) := slv(63 downto 32);
+  VEC(2) := slv(31 downto 0);
+  return VEC;
+end slv_to_vec_3;
+
 function slv_to_mat_3 (slv : std_logic_vector(287 downto 0))
                       return mat_3 is
   variable MAT : mat_3;
@@ -56,6 +75,16 @@ begin
   MAT(3)(3) := slv(31 downto 0);
   return MAT;
 end slv_to_mat_4;
+
+function vec_3_to_slv (vec : vec_3)
+                     return std_logic_vector is
+  variable slv : std_logic_vector(95 downto 0);
+begin
+  slv(95 downto 64) := vec(0);
+  slv(63 downto 32) := vec(1);
+  slv(31 downto 0) := vec(2);
+  return slv;
+end vec_3_to_slv;
 
 function mat_3_to_slv (mat : mat_3)
                      return std_logic_vector is
