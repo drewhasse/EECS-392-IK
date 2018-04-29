@@ -9,6 +9,8 @@ package ik_pack is
   type mat_4 is array(0 to 4) of vec_4;
   function slv_to_vec_3 (slv : std_logic_vector(95 downto 0))
                         return vec_3;
+  function slv_to_vec_4 (slv : std_logic_vector(127 downto 0))
+                        return vec_4;
   function slv_to_mat_3 (slv : std_logic_vector(287 downto 0))
                         return mat_3;
   function slv_to_mat_4 (slv : std_logic_vector(511 downto 0))
@@ -19,7 +21,9 @@ package ik_pack is
                        return std_logic_vector;
   function vec_3_to_slv (vec : vec_3)
                        return std_logic_vector;
-  function vec_3_sub (v1 : vec_3, v2 : vec_3)
+  function vec_4_to_slv (vec : vec_4)
+                       return std_logic_vector;
+  function vec_3_sub (v1 : vec_3; v2 : vec_3)
                        return vec_3;
   component cross_product
     port (
@@ -42,6 +46,17 @@ begin
   VEC(2) := slv(31 downto 0);
   return VEC;
 end slv_to_vec_3;
+
+function slv_to_vec_4 (slv : std_logic_vector(127 downto 0))
+                      return vec_4 is
+  variable VEC : vec_4;
+begin
+  VEC(0) := slv(127 downto 96);
+  VEC(1) := slv(95 downto 64);
+  VEC(2) := slv(63 downto 32);
+  VEC(3) := slv(31 downto 0);
+  return VEC;
+end slv_to_vec_4;
 
 function slv_to_mat_3 (slv : std_logic_vector(287 downto 0))
                       return mat_3 is
@@ -92,6 +107,17 @@ begin
   return slv;
 end vec_3_to_slv;
 
+function vec_4_to_slv (vec : vec_4)
+                     return std_logic_vector is
+  variable slv : std_logic_vector(127 downto 0);
+begin
+  slv(127 downto 96) := vec(0);
+  slv(95 downto 64) := vec(1);
+  slv(63 downto 32) := vec(2);
+  slv(31 downto 0) := vec(3);
+  return slv;
+end vec_4_to_slv;
+
 function mat_3_to_slv (mat : mat_3)
                      return std_logic_vector is
   variable slv : std_logic_vector(287 downto 0);
@@ -131,7 +157,7 @@ begin
   return slv;
 end mat_4_to_slv;
 
-function vec_3_sub (v1 : vec_3, v2 : vec_3)
+function vec_3_sub (v1 : vec_3; v2 : vec_3)
                      return vec_3 is
   variable vout : vec_3;
 begin
