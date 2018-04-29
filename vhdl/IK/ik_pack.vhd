@@ -33,6 +33,38 @@ package ik_pack is
     );
   end component cross_product;
 
+  component mat_4x1
+  port (
+    mat_4_l_in : in  std_logic_vector(511 downto 0);
+    vec_4_r_in : in  std_logic_vector(127 downto 0);
+    vec_4_out  : out std_logic_vector(127 downto 0)
+  );
+  end component mat_4x1;
+
+  component mat_3x1
+  port (
+    mat_3_l_in : in  std_logic_vector(287 downto 0);
+    vec_3_r_in : in  std_logic_vector(95 downto 0);
+    vec_3_out  : out std_logic_vector(95 downto 0)
+  );
+  end component mat_3x1;
+
+  component mat_4x4
+  port (
+    mat_4_l_in : in  std_logic_vector(511 downto 0);
+    mat_4_r_in : in  std_logic_vector(511 downto 0);
+    mat_4_out  : out std_logic_vector(511 downto 0)
+  );
+  end component mat_4x4;
+
+  component mat_3x3
+  port (
+    mat_3_l_in : in  std_logic_vector(287 downto 0);
+    mat_3_r_in : in  std_logic_vector(287 downto 0);
+    mat_3_out  : out std_logic_vector(287 downto 0)
+  );
+  end component mat_3x3;
+
 end package ik_pack;
 
 package body ik_pack is

@@ -58,16 +58,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity mat_4x4_tb
 -- Compiling architecture behavioral of mat_4x4_tb
 
-} {} {}} {C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_pack.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Graehme\Documents\College\EECS 392\IK_Repo\vhdl\IK\ik_pack.vhd}
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling package ik_pack
--- Compiling package body ik_pack
--- Loading package ik_pack
-
 } {} {}} {C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
