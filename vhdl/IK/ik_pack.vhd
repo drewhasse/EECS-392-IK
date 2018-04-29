@@ -124,4 +124,14 @@ begin
   slv(31 downto 0) := mat(3)(3);
   return slv;
 end mat_4_to_slv;
+
+function vec_3_sub (v1 : vec_3, v2 : vec_3)
+                     return vec_3 is
+  variable vout : vec_3;
+begin
+  vout(0) := std_logic_vector(signed(v1(0))-signed(v2(0)));
+  vout(1) := std_logic_vector(signed(v1(1))-signed(v2(1)));
+  vout(2) := std_logic_vector(signed(v1(2))-signed(v2(2)));
+  return vout;
+end vec_3_sub;
 end package body ik_pack;
