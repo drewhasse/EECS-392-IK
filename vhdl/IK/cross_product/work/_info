@@ -9,7 +9,7 @@ z2
 cModel Technology
 dD:/Drew/Northwestern/EECS392/Project/vhdl/serial/sim
 Ecross_product
-Z0 w1525033611
+Z0 w1525035337
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -22,9 +22,9 @@ VPT7L_knR8F3d3DYb[VfEm0
 !s100 f4QT;E4UHYW6:2EB4ngD:0
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1525033613
+Z8 !s110 1525035341
 !i10b 1
-Z9 !s108 1525033613.000000
+Z9 !s108 1525035341.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/IK/cross_product/cross_product.vhd|
 Z11 !s107 D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/IK/cross_product/cross_product.vhd|
 !i113 1
@@ -37,8 +37,8 @@ R3
 DEx4 work 13 cross_product 0 22 PT7L_knR8F3d3DYb[VfEm0
 l17
 L13
-V[W:96L;LN^aG;6A0IPQfM3
-!s100 c4KMb:9J<MfM_mmkb6V@R3
+VU5i[o=3KQ7Q<[Xf]oIFdj2
+!s100 V?m5FaP5jZeikee0E`8Ed1
 R7
 32
 R8
@@ -46,6 +46,47 @@ R8
 R9
 R10
 R11
+!i113 1
+R12
+R13
+Ecross_product_tb
+Z14 w1525035234
+R1
+R2
+R3
+R4
+Z15 8D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/IK/cross_product/cross_product_tb.vhd
+Z16 FD:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/IK/cross_product/cross_product_tb.vhd
+l0
+L5
+VjDn6ie9DM7V=G]ieh_Ba:2
+!s100 IX@VW2[3`<Mb0ddkK3Zn21
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/IK/cross_product/cross_product_tb.vhd|
+Z18 !s107 D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/IK/cross_product/cross_product_tb.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+Z19 DEx4 work 16 cross_product_tb 0 22 jDn6ie9DM7V=G]ieh_Ba:2
+l28
+L8
+Z20 VM45lNaA9EWA=8AJnzB1`B1
+Z21 !s100 U:ziJ<?iAeFk[D5j6W]Ja0
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
 !i113 1
 R12
 R13
