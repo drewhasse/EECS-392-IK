@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use numeric_std.all;
+use work.ik_pack.all;
 
 entity jacobian_t is
   port (
@@ -24,7 +25,7 @@ begin
   p1_v <= slv_to_vec_3(p1);
   p2_v <= slv_to_vec_3(p2);
   vce_v <= slv_to_vec_3(v_cross_e);
-  
+
   j_t <= mat_3_to_slv(j_mat);
 
   cross_e : cross_product

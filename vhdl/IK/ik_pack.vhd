@@ -7,6 +7,8 @@ package ik_pack is
   type vec_4 is array(0 to 3) of std_logic_vector(31 downto 0);
   type mat_3 is array(0 to 3) of vec_3;
   type mat_4 is array(0 to 4) of vec_4;
+  function slv_to_vec_3 (slv : std_logic_vector(95 downto 0))
+                        return vec_3;
   function slv_to_mat_3 (slv : std_logic_vector(287 downto 0))
                         return mat_3;
   function slv_to_mat_4 (slv : std_logic_vector(511 downto 0))
@@ -15,6 +17,10 @@ package ik_pack is
                        return std_logic_vector;
   function mat_4_to_slv (mat : mat_4)
                        return std_logic_vector;
+  function vec_3_to_slv (vec : vec_3)
+                       return std_logic_vector;
+  function vec_3_sub (v1 : vec_3, v2 : vec_3)
+                       return vec_3;
   component cross_product
     port (
       a  : in  std_logic_vector(95 downto 0);
