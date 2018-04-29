@@ -1,1 +1,11 @@
+D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/IK/cross_product/cross_product.vhd {0 {vcom -work work -2002 -explicit -stats=none D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/IK/cross_product/cross_product.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+** Error: (vcom-11) Could not find work.ik_pack.
+** Error (suppressible): D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/IK/cross_product/cross_product.vhd(3): (vcom-1195) Cannot find expanded name "work.ik_pack".
+** Error: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/IK/cross_product/cross_product.vhd(3): Unknown expanded name.
+** Error: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/IK/cross_product/cross_product.vhd(5): VHDL Compiler exiting
 
+} {6.0 7.0 8.0 10.0} {}}
