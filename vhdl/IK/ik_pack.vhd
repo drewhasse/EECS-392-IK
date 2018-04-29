@@ -5,8 +5,8 @@ use IEEE.numeric_std.all;
 package ik_pack is
   type vec_3 is array(0 to 2) of std_logic_vector(31 downto 0);
   type vec_4 is array(0 to 3) of std_logic_vector(31 downto 0);
-  type mat_3 is array(0 to 3) of vec_3;
-  type mat_4 is array(0 to 4) of vec_4;
+  type mat_3 is array(0 to 2) of vec_3;
+  type mat_4 is array(0 to 3) of vec_4;
   function slv_to_vec_3 (slv : std_logic_vector(95 downto 0))
                         return vec_3;
   function slv_to_vec_4 (slv : std_logic_vector(127 downto 0))
