@@ -3,7 +3,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 package ik_pack is
-  constant 2pi : std_logic_vector(31 downto 0) := "00000000000001100100100001111110";
+  constant TWO_PI : std_logic_vector(31 downto 0) := "00000000000001100100100001111110";
   type vec_3 is array(0 to 2) of std_logic_vector(31 downto 0);
   type vec_4 is array(0 to 3) of std_logic_vector(31 downto 0);
   type mat_3 is array(0 to 2) of vec_3;
@@ -201,8 +201,11 @@ begin
   vout(2) := std_logic_vector(signed(v1(2))-signed(v2(2)));
   return vout;
 end vec_3_sub;
+
 function rads_to_brads (rads : std_logic_vector(31 downto 0))
                      return std_logic_vector is
 begin
+  return (std_logic_vector((signed(rads)/signed(TWO_PI)) SLL 16));
 end rads_to_brads;
+
 end package body ik_pack;
