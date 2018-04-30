@@ -3,6 +3,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 package ik_pack is
+  constant 2pi : std_logic_vector(31 downto 0) := "00000000000001100100100001111110";
   type vec_3 is array(0 to 2) of std_logic_vector(31 downto 0);
   type vec_4 is array(0 to 3) of std_logic_vector(31 downto 0);
   type mat_3 is array(0 to 2) of vec_3;
