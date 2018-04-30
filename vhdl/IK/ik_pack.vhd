@@ -25,6 +25,8 @@ package ik_pack is
                        return std_logic_vector;
   function vec_3_sub (v1 : vec_3; v2 : vec_3)
                        return vec_3;
+  function rads_to_brads (rads : std_logic_vector(31 downto 0))
+                       return std_logic_vector;
   component cross_product
     port (
       a  : in  std_logic_vector(95 downto 0);
@@ -198,4 +200,8 @@ begin
   vout(2) := std_logic_vector(signed(v1(2))-signed(v2(2)));
   return vout;
 end vec_3_sub;
+function rads_to_brads (rads : std_logic_vector(31 downto 0))
+                     return std_logic_vector is
+begin
+end rads_to_brads;
 end package body ik_pack;
