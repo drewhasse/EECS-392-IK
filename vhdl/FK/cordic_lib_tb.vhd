@@ -20,7 +20,7 @@ architecture behavioral of cordic_lib_tb is
     sincos_sequential_i : sincos_pipelined
     generic map (
       SIZE               => 32,
-      ITERATIONS         => 10,
+      ITERATIONS         => 5,
       FRAC_BITS          => 16
     )
     port map (
