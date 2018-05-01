@@ -26,7 +26,7 @@ architecture behavioral of cordic_lib_tb is
     port map (
       Clock        => clk_tb,
       Reset        => reset_tb,
-      Angle        => signed'("11000000000000000000000000000000"),
+      Angle        => signed(rads_to_brads(std_logic_vector'("00000000000000011001001000011111"))),
       Sin          => sin_tb,
       Cos          => cos_tb
     );
