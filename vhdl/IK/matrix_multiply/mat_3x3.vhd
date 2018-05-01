@@ -16,41 +16,41 @@ architecture behavioral of mat_3x3 is
 begin
   mat_3_l <= slv_to_mat_3(mat_3_l_in);
   mat_3_r <= slv_to_mat_3(mat_3_r_in);
-  mat_3_int(0)(0) <= std_logic_vector(resize(
+  mat_3_int(0)(0) <= std_logic_vector(resize((
                      ((signed(mat_3_l(0)(0))*signed(mat_3_r(0)(0)))+
                      (signed(mat_3_l(0)(1))*signed(mat_3_r(1)(0)))+
-                     (signed(mat_3_l(0)(2))*signed(mat_3_r(2)(0)))),32));
-  mat_3_int(0)(1) <= std_logic_vector(resize(
+                     (signed(mat_3_l(0)(2))*signed(mat_3_r(2)(0)))) SRL 16), 32));
+  mat_3_int(0)(1) <= std_logic_vector(resize((
                      ((signed(mat_3_l(0)(0))*signed(mat_3_r(0)(1)))+
                      (signed(mat_3_l(0)(1))*signed(mat_3_r(1)(1)))+
-                     (signed(mat_3_l(0)(2))*signed(mat_3_r(2)(1)))),32));
-  mat_3_int(0)(2) <= std_logic_vector(resize(
+                     (signed(mat_3_l(0)(2))*signed(mat_3_r(2)(1)))) SRL 16), 32));
+  mat_3_int(0)(2) <= std_logic_vector(resize((
                      ((signed(mat_3_l(0)(0))*signed(mat_3_r(0)(2)))+
                      (signed(mat_3_l(0)(1))*signed(mat_3_r(1)(2)))+
-                     (signed(mat_3_l(0)(2))*signed(mat_3_r(2)(2)))),32));
-  mat_3_int(1)(0) <= std_logic_vector(resize(
+                     (signed(mat_3_l(0)(2))*signed(mat_3_r(2)(2)))) SRL 16), 32));
+  mat_3_int(1)(0) <= std_logic_vector(resize((
                      ((signed(mat_3_l(1)(0))*signed(mat_3_r(0)(0)))+
                      (signed(mat_3_l(1)(1))*signed(mat_3_r(1)(0)))+
-                     (signed(mat_3_l(1)(2))*signed(mat_3_r(2)(0)))),32));
-  mat_3_int(1)(1) <= std_logic_vector(resize(
+                     (signed(mat_3_l(1)(2))*signed(mat_3_r(2)(0)))) SRL 16), 32));
+  mat_3_int(1)(1) <= std_logic_vector(resize((
                      ((signed(mat_3_l(1)(0))*signed(mat_3_r(0)(1)))+
                      (signed(mat_3_l(1)(1))*signed(mat_3_r(1)(1)))+
-                     (signed(mat_3_l(1)(2))*signed(mat_3_r(2)(1)))),32));
-  mat_3_int(1)(2) <= std_logic_vector(resize(
+                     (signed(mat_3_l(1)(2))*signed(mat_3_r(2)(1)))) SRL 16), 32));
+  mat_3_int(1)(2) <= std_logic_vector(resize((
                      ((signed(mat_3_l(1)(0))*signed(mat_3_r(0)(2)))+
                      (signed(mat_3_l(1)(1))*signed(mat_3_r(1)(2)))+
-                     (signed(mat_3_l(1)(2))*signed(mat_3_r(2)(2)))),32));
-  mat_3_int(2)(0) <= std_logic_vector(resize(
+                     (signed(mat_3_l(1)(2))*signed(mat_3_r(2)(2)))) SRL 16), 32));
+  mat_3_int(2)(0) <= std_logic_vector(resize((
                      ((signed(mat_3_l(2)(0))*signed(mat_3_r(0)(0)))+
                      (signed(mat_3_l(2)(1))*signed(mat_3_r(1)(0)))+
-                     (signed(mat_3_l(2)(2))*signed(mat_3_r(2)(0)))),32));
-  mat_3_int(2)(1) <= std_logic_vector(resize(
+                     (signed(mat_3_l(2)(2))*signed(mat_3_r(2)(0)))) SRL 16), 32));
+  mat_3_int(2)(1) <= std_logic_vector(resize((
                      ((signed(mat_3_l(2)(0))*signed(mat_3_r(0)(1)))+
                      (signed(mat_3_l(2)(1))*signed(mat_3_r(1)(1)))+
-                     (signed(mat_3_l(2)(2))*signed(mat_3_r(2)(1)))),32));
-  mat_3_int(2)(2) <= std_logic_vector(resize(
+                     (signed(mat_3_l(2)(2))*signed(mat_3_r(2)(1)))) SRL 16), 32));
+  mat_3_int(2)(2) <= std_logic_vector(resize((
                      ((signed(mat_3_l(2)(0))*signed(mat_3_r(0)(2)))+
                      (signed(mat_3_l(2)(1))*signed(mat_3_r(1)(2)))+
-                     (signed(mat_3_l(2)(2))*signed(mat_3_r(2)(2)))),32));
+                     (signed(mat_3_l(2)(2))*signed(mat_3_r(2)(2)))) SRL 16), 32));
   mat_3_out <= mat_3_to_slv(mat_3_int);
 end architecture;

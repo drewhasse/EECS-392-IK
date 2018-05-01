@@ -29,25 +29,25 @@ architecture behavioral of mat_3x3_tb is
   sim: process is
     variable temp_r, temp_l : mat_3;
     begin
-      temp_r(0)(0) := (0=>'1', others => '0');
-      temp_r(0)(1) := (0=>'1', others => '0');
-      temp_r(0)(2) := (0=>'1', others => '0');
-      temp_r(1)(0) := (0=>'1', others => '0');
-      temp_r(1)(1) := (0=>'1', others => '0');
-      temp_r(1)(2) := (0=>'1', others => '0');
-      temp_r(2)(0) := (0=>'1', others => '0');
-      temp_r(2)(1) := (0=>'1', others => '0');
-      temp_r(2)(2) := (0=>'1', others => '0');
+      temp_r(0)(0) := (16=>'1', others => '0');
+      temp_r(0)(1) := (16=>'1', others => '0');
+      temp_r(0)(2) := (16=>'1', others => '0');
+      temp_r(1)(0) := (16=>'1', others => '0');
+      temp_r(1)(1) := (16=>'1', others => '0');
+      temp_r(1)(2) := (16=>'1', others => '0');
+      temp_r(2)(0) := (16=>'1', others => '0');
+      temp_r(2)(1) := (16=>'1', others => '0');
+      temp_r(2)(2) := (16=>'1', others => '0');
 
-      temp_l(0)(0) := (0=>'1', others => '0');
-      temp_l(0)(1) := (0=>'1', others => '0');
-      temp_l(0)(2) := (0=>'1', others => '0');
-      temp_l(1)(0) := (0=>'1', others => '0');
-      temp_l(1)(1) := (0=>'1', others => '0');
-      temp_l(1)(2) := (0=>'1', others => '0');
-      temp_l(2)(0) := (0=>'1', others => '0');
-      temp_l(2)(1) := (0=>'1', others => '0');
-      temp_l(2)(2) := (0=>'1', others => '0');
+      temp_l(0)(0) := (16=>'1', others => '0');
+      temp_l(0)(1) := (16=>'1', others => '0');
+      temp_l(0)(2) := (16=>'1', others => '0');
+      temp_l(1)(0) := (16=>'1', others => '0');
+      temp_l(1)(1) := (16=>'1', others => '0');
+      temp_l(1)(2) := (16=>'1', others => '0');
+      temp_l(2)(0) := (16=>'1', others => '0');
+      temp_l(2)(1) := (16=>'1', others => '0');
+      temp_l(2)(2) := (16=>'1', others => '0');
 
       mat_3_l_in_tb <= mat_3_to_slv(temp_l);
       mat_3_r_in_tb <= mat_3_to_slv(temp_r);

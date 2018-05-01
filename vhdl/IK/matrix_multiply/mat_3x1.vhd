@@ -17,17 +17,17 @@ architecture behavioral of mat_3x1 is
 begin
   mat_3_l <= slv_to_mat_3(mat_3_l_in);
   vec_3_r <= slv_to_vec_3(vec_3_r_in);
-  vec_3_int(0) <= std_logic_vector(resize(
+  vec_3_int(0) <= std_logic_vector(resize((
                     ((signed(mat_3_l(0)(0))*signed(vec_3_r(0)))+
                      (signed(mat_3_l(0)(1))*signed(vec_3_r(1)))+
-                     (signed(mat_3_l(0)(2))*signed(vec_3_r(2)))),32));
-  vec_3_int(1) <= std_logic_vector(resize(
+                     (signed(mat_3_l(0)(2))*signed(vec_3_r(2)))) SRL 16), 32));
+  vec_3_int(1) <= std_logic_vector(resize((
                     ((signed(mat_3_l(1)(0))*signed(vec_3_r(0)))+
                      (signed(mat_3_l(1)(1))*signed(vec_3_r(1)))+
-                     (signed(mat_3_l(1)(2))*signed(vec_3_r(2)))),32));
-  vec_3_int(2) <= std_logic_vector(resize(
+                     (signed(mat_3_l(1)(2))*signed(vec_3_r(2)))) SRL 16), 32));
+  vec_3_int(2) <= std_logic_vector(resize((
                     ((signed(mat_3_l(2)(0))*signed(vec_3_r(0)))+
                      (signed(mat_3_l(2)(1))*signed(vec_3_r(1)))+
-                     (signed(mat_3_l(2)(2))*signed(vec_3_r(2)))),32));
+                     (signed(mat_3_l(2)(2))*signed(vec_3_r(2)))) SRL 16), 32));
   vec_3_out <= vec_3_to_slv(vec_3_int);
 end architecture;

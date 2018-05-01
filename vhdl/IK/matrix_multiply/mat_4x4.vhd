@@ -16,85 +16,85 @@ architecture behavioral of mat_4x4 is
 begin
   mat_4_l <= slv_to_mat_4(mat_4_l_in);
   mat_4_r <= slv_to_mat_4(mat_4_r_in);
-  mat_4_int(0)(0) <= std_logic_vector(resize(
+  mat_4_int(0)(0) <= std_logic_vector(resize((
                     ((signed(mat_4_l(0)(0))*signed(mat_4_r(0)(0)))+
                      (signed(mat_4_l(0)(1))*signed(mat_4_r(1)(0)))+
                      (signed(mat_4_l(0)(2))*signed(mat_4_r(2)(0)))+
-                     (signed(mat_4_l(0)(3))*signed(mat_4_r(3)(0)))),32));
-  mat_4_int(0)(1) <= std_logic_vector(resize(
+                     (signed(mat_4_l(0)(3))*signed(mat_4_r(3)(0)))) SRL 16), 32));
+  mat_4_int(0)(1) <= std_logic_vector(resize((
                     ((signed(mat_4_l(0)(0))*signed(mat_4_r(0)(1)))+
                      (signed(mat_4_l(0)(1))*signed(mat_4_r(1)(1)))+
                      (signed(mat_4_l(0)(2))*signed(mat_4_r(2)(1)))+
-                     (signed(mat_4_l(0)(3))*signed(mat_4_r(3)(1)))),32));
-  mat_4_int(0)(2) <= std_logic_vector(resize(
+                     (signed(mat_4_l(0)(3))*signed(mat_4_r(3)(1)))) SRL 16), 32));
+  mat_4_int(0)(2) <= std_logic_vector(resize((
                     ((signed(mat_4_l(0)(0))*signed(mat_4_r(0)(2)))+
                      (signed(mat_4_l(0)(1))*signed(mat_4_r(1)(2)))+
                      (signed(mat_4_l(0)(2))*signed(mat_4_r(2)(2)))+
-                     (signed(mat_4_l(0)(3))*signed(mat_4_r(3)(2)))),32));
-  mat_4_int(0)(3) <= std_logic_vector(resize(
+                     (signed(mat_4_l(0)(3))*signed(mat_4_r(3)(2)))) SRL 16), 32));
+  mat_4_int(0)(3) <= std_logic_vector(resize((
                     ((signed(mat_4_l(0)(0))*signed(mat_4_r(0)(3)))+
                      (signed(mat_4_l(0)(1))*signed(mat_4_r(1)(3)))+
                      (signed(mat_4_l(0)(2))*signed(mat_4_r(2)(3)))+
-                     (signed(mat_4_l(0)(3))*signed(mat_4_r(3)(3)))),32));
-  mat_4_int(1)(0) <= std_logic_vector(resize(
+                     (signed(mat_4_l(0)(3))*signed(mat_4_r(3)(3)))) SRL 16), 32));
+  mat_4_int(1)(0) <= std_logic_vector(resize((
                     ((signed(mat_4_l(1)(0))*signed(mat_4_r(0)(0)))+
                      (signed(mat_4_l(1)(1))*signed(mat_4_r(1)(0)))+
                      (signed(mat_4_l(1)(2))*signed(mat_4_r(2)(0)))+
-                     (signed(mat_4_l(1)(3))*signed(mat_4_r(3)(0)))),32));
-  mat_4_int(1)(1) <= std_logic_vector(resize(
+                     (signed(mat_4_l(1)(3))*signed(mat_4_r(3)(0)))) SRL 16), 32));
+  mat_4_int(1)(1) <= std_logic_vector(resize((
                     ((signed(mat_4_l(1)(0))*signed(mat_4_r(0)(1)))+
                      (signed(mat_4_l(1)(1))*signed(mat_4_r(1)(1)))+
                      (signed(mat_4_l(1)(2))*signed(mat_4_r(2)(1)))+
-                     (signed(mat_4_l(1)(3))*signed(mat_4_r(3)(1)))),32));
-  mat_4_int(1)(2) <= std_logic_vector(resize(
+                     (signed(mat_4_l(1)(3))*signed(mat_4_r(3)(1)))) SRL 16), 32));
+  mat_4_int(1)(2) <= std_logic_vector(resize((
                     ((signed(mat_4_l(1)(0))*signed(mat_4_r(0)(2)))+
                      (signed(mat_4_l(1)(1))*signed(mat_4_r(1)(2)))+
                      (signed(mat_4_l(1)(2))*signed(mat_4_r(2)(2)))+
-                     (signed(mat_4_l(1)(3))*signed(mat_4_r(3)(2)))),32));
-  mat_4_int(1)(3) <= std_logic_vector(resize(
+                     (signed(mat_4_l(1)(3))*signed(mat_4_r(3)(2)))) SRL 16), 32));
+  mat_4_int(1)(3) <= std_logic_vector(resize((
                     ((signed(mat_4_l(1)(0))*signed(mat_4_r(0)(3)))+
                      (signed(mat_4_l(1)(1))*signed(mat_4_r(1)(3)))+
                      (signed(mat_4_l(1)(2))*signed(mat_4_r(2)(3)))+
-                     (signed(mat_4_l(1)(3))*signed(mat_4_r(3)(3)))),32));
-  mat_4_int(2)(0) <= std_logic_vector(resize(
+                     (signed(mat_4_l(1)(3))*signed(mat_4_r(3)(3)))) SRL 16), 32));
+  mat_4_int(2)(0) <= std_logic_vector(resize((
                     ((signed(mat_4_l(2)(0))*signed(mat_4_r(0)(0)))+
                      (signed(mat_4_l(2)(1))*signed(mat_4_r(1)(0)))+
                      (signed(mat_4_l(2)(2))*signed(mat_4_r(2)(0)))+
-                     (signed(mat_4_l(2)(3))*signed(mat_4_r(3)(0)))),32));
-  mat_4_int(2)(1) <= std_logic_vector(resize(
+                     (signed(mat_4_l(2)(3))*signed(mat_4_r(3)(0)))) SRL 16), 32));
+  mat_4_int(2)(1) <= std_logic_vector(resize((
                     ((signed(mat_4_l(2)(0))*signed(mat_4_r(0)(1)))+
                      (signed(mat_4_l(2)(1))*signed(mat_4_r(1)(1)))+
                      (signed(mat_4_l(2)(2))*signed(mat_4_r(2)(1)))+
-                     (signed(mat_4_l(2)(3))*signed(mat_4_r(3)(1)))),32));
-  mat_4_int(2)(2) <= std_logic_vector(resize(
+                     (signed(mat_4_l(2)(3))*signed(mat_4_r(3)(1)))) SRL 16), 32));
+  mat_4_int(2)(2) <= std_logic_vector(resize((
                     ((signed(mat_4_l(2)(0))*signed(mat_4_r(0)(2)))+
                      (signed(mat_4_l(2)(1))*signed(mat_4_r(1)(2)))+
                      (signed(mat_4_l(2)(2))*signed(mat_4_r(2)(2)))+
-                     (signed(mat_4_l(2)(3))*signed(mat_4_r(3)(2)))),32));
-  mat_4_int(2)(3) <= std_logic_vector(resize(
+                     (signed(mat_4_l(2)(3))*signed(mat_4_r(3)(2)))) SRL 16), 32));
+  mat_4_int(2)(3) <= std_logic_vector(resize((
                     ((signed(mat_4_l(2)(0))*signed(mat_4_r(0)(3)))+
                      (signed(mat_4_l(2)(1))*signed(mat_4_r(1)(3)))+
                      (signed(mat_4_l(2)(2))*signed(mat_4_r(2)(3)))+
-                     (signed(mat_4_l(2)(3))*signed(mat_4_r(3)(3)))),32));
-  mat_4_int(3)(0) <= std_logic_vector(resize(
+                     (signed(mat_4_l(2)(3))*signed(mat_4_r(3)(3)))) SRL 16), 32));
+  mat_4_int(3)(0) <= std_logic_vector(resize((
                     ((signed(mat_4_l(3)(0))*signed(mat_4_r(0)(0)))+
                      (signed(mat_4_l(3)(1))*signed(mat_4_r(1)(0)))+
                      (signed(mat_4_l(3)(2))*signed(mat_4_r(2)(0)))+
-                     (signed(mat_4_l(3)(3))*signed(mat_4_r(3)(0)))),32));
-  mat_4_int(3)(1) <= std_logic_vector(resize(
+                     (signed(mat_4_l(3)(3))*signed(mat_4_r(3)(0)))) SRL 16), 32));
+  mat_4_int(3)(1) <= std_logic_vector(resize((
                     ((signed(mat_4_l(3)(0))*signed(mat_4_r(0)(1)))+
                      (signed(mat_4_l(3)(1))*signed(mat_4_r(1)(1)))+
                      (signed(mat_4_l(3)(2))*signed(mat_4_r(2)(1)))+
-                     (signed(mat_4_l(3)(3))*signed(mat_4_r(3)(1)))),32));
-  mat_4_int(3)(2) <= std_logic_vector(resize(
+                     (signed(mat_4_l(3)(3))*signed(mat_4_r(3)(1)))) SRL 16), 32));
+  mat_4_int(3)(2) <= std_logic_vector(resize((
                     ((signed(mat_4_l(3)(0))*signed(mat_4_r(0)(2)))+
                      (signed(mat_4_l(3)(1))*signed(mat_4_r(1)(2)))+
                      (signed(mat_4_l(3)(2))*signed(mat_4_r(2)(2)))+
-                     (signed(mat_4_l(3)(3))*signed(mat_4_r(3)(2)))),32));
-  mat_4_int(3)(3) <= std_logic_vector(resize(
+                     (signed(mat_4_l(3)(3))*signed(mat_4_r(3)(2)))) SRL 16), 32));
+  mat_4_int(3)(3) <= std_logic_vector(resize((
                     ((signed(mat_4_l(3)(0))*signed(mat_4_r(0)(3)))+
                      (signed(mat_4_l(3)(1))*signed(mat_4_r(1)(3)))+
                      (signed(mat_4_l(3)(2))*signed(mat_4_r(2)(3)))+
-                     (signed(mat_4_l(3)(3))*signed(mat_4_r(3)(3)))),32));
+                     (signed(mat_4_l(3)(3))*signed(mat_4_r(3)(3)))) SRL 16), 32));
   mat_4_out <= mat_4_to_slv(mat_4_int);
 end architecture;

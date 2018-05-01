@@ -205,7 +205,7 @@ end vec_3_sub;
 function rads_to_brads (rads : std_logic_vector(31 downto 0))
                      return std_logic_vector is
 begin
-  return (std_logic_vector((signed(rads)/signed(TWO_PI)) SLL 16));
+  return std_logic_vector( ((resize(signed(rads),48) SLL 16) / signed(TWO_PI)) SLL 16);
 end rads_to_brads;
 
 end package body ik_pack;
