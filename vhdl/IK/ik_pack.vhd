@@ -30,7 +30,19 @@ package ik_pack is
   function vec_3_sub (v1 : vec_3; v2 : vec_3)
                        return vec_3;
   function rads_to_brads (rads : std_logic_vector(31 downto 0))
-                       return std_logic_vector;
+                       return signed;
+  component fk_comb
+    port (
+      clk : in std_logic;
+      reset : in std_logic;
+      a0 : in  std_logic_vector(31 downto 0);
+      a1 : in  std_logic_vector(31 downto 0);
+      a2 : in  std_logic_vector(31 downto 0);
+      ex : out std_logic_vector(31 downto 0);
+      ey : out std_logic_vector(31 downto 0)
+    );
+  end component fk_comb;
+
   component cross_product
     port (
       a  : in  std_logic_vector(95 downto 0);
@@ -206,9 +218,9 @@ begin
 end vec_3_sub;
 
 function rads_to_brads (rads : std_logic_vector(31 downto 0))
-                     return std_logic_vector is
+                     return signed is
 begin
-  return std_logic_vector( resize((((resize(signed(rads),48) SLL 16) / signed(TWO_PI)) SLL 16),32));
+  return signed( resize((((resize(signed(rads),48) SLL 16) / signed(TWO_PI)) SLL 16),32));
 end rads_to_brads;
 
 end package body ik_pack;
