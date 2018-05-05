@@ -39,7 +39,11 @@ package ik_pack is
       a1 : in  std_logic_vector(31 downto 0);
       a2 : in  std_logic_vector(31 downto 0);
       ex : out std_logic_vector(31 downto 0);
-      ey : out std_logic_vector(31 downto 0)
+      ey : out std_logic_vector(31 downto 0);
+      p1x : out std_logic_vector(31 downto 0);
+      p1y : out std_logic_vector(31 downto 0);
+      p2x : out std_logic_vector(31 downto 0);
+      p2y : out std_logic_vector(31 downto 0)
     );
   end component fk_comb;
 
