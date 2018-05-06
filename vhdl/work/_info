@@ -23,9 +23,9 @@ VHbD::Q?jh6YXmJ]Y90E@V1
 Z7 OV;C;10.5b;63
 32
 b1
-Z8 !s110 1525399310
+Z8 !s110 1525645419
 !i10b 1
-Z9 !s108 1525399310.000000
+Z9 !s108 1525645419.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/extras/cordic.vhdl|
 Z11 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/extras/cordic.vhdl|
 !i113 1
@@ -99,7 +99,7 @@ R13
 Ecordic_lib_tb
 Z17 w1525397249
 R14
-Z18 DPx4 work 7 ik_pack 0 22 <>Y0n`Qd=5=9DNPXG@9g51
+Z18 DPx4 work 7 ik_pack 0 22 D2JZLTea]4UHL1?F4dcoM1
 R0
 R1
 R2
@@ -231,14 +231,96 @@ R11
 !i113 1
 R12
 R13
-Edynamic_delay_line_signed
-Z23 w1525044348
+Ecounter
+Z23 w1525640904
 R0
 R1
 R2
 R4
-Z24 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/extras/pipelining.vhdl
-Z25 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/extras/pipelining.vhdl
+Z24 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/counter.vhd
+Z25 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/counter.vhd
+l0
+L5
+VA;[8gM?IcaSO9Pf0LnkNB0
+!s100 41EzJ8:Z:ke?bRQE^AT<42
+R7
+32
+Z26 !s110 1525645421
+!i10b 1
+Z27 !s108 1525645421.000000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/counter.vhd|
+Z29 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/counter.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R0
+R1
+R2
+DEx4 work 7 counter 0 22 A;[8gM?IcaSO9Pf0LnkNB0
+l19
+L14
+V:LO^W=4Ch0Nc@=eXmkHd92
+!s100 mMRbiMWX1nDBZa1Zm4_<C1
+R7
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R12
+R13
+Ecross_product
+Z30 w1525641985
+R0
+R1
+R2
+R4
+Z31 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/cross_product/cross_product.vhd
+Z32 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/cross_product/cross_product.vhd
+l0
+L5
+VPT7L_knR8F3d3DYb[VfEm0
+!s100 f4QT;E4UHYW6:2EB4ngD:0
+R7
+32
+Z33 !s110 1525645420
+!i10b 1
+Z34 !s108 1525645420.000000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/cross_product/cross_product.vhd|
+Z36 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/cross_product/cross_product.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R0
+R1
+R2
+DEx4 work 13 cross_product 0 22 PT7L_knR8F3d3DYb[VfEm0
+l17
+L13
+VTCn4j[bdzAHT0>hi^d2R62
+!s100 c7OOIBGBCZNbiSX4LRgNS0
+R7
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R12
+R13
+Edynamic_delay_line_signed
+Z37 w1525044348
+R0
+R1
+R2
+R4
+Z38 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/extras/pipelining.vhdl
+Z39 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/extras/pipelining.vhdl
 l0
 L754
 VB;d:iS<6;]CFZ=L:S1LLR3
@@ -248,8 +330,8 @@ R7
 R8
 !i10b 1
 R9
-Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/extras/pipelining.vhdl|
-Z27 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/extras/pipelining.vhdl|
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/extras/pipelining.vhdl|
+Z41 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/extras/pipelining.vhdl|
 !i113 1
 R12
 R13
@@ -267,19 +349,19 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
 Edynamic_delay_line_sulv
-R23
+R37
 R0
 R1
 R2
 R4
-R24
-R25
+R38
+R39
 l0
 L712
 VI`znRGOiL14S=0[A7^i3D0
@@ -289,8 +371,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -308,19 +390,19 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
 Edynamic_delay_line_unsigned
-R23
+R37
 R0
 R1
 R2
 R4
-R24
-R25
+R38
+R39
 l0
 L796
 V@ojL]@W33P09IT3hNICSY0
@@ -330,8 +412,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -349,18 +431,18 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
 Efixed_delay_line
-R23
+R37
 R1
 R2
 R4
-R24
-R25
+R38
+R39
 l0
 L519
 V6D?Jgak;S6LBJ^h53Bl0i3
@@ -370,8 +452,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -388,19 +470,19 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
 Efixed_delay_line_signed
-R23
+R37
 R0
 R1
 R2
 R4
-R24
-R25
+R38
+R39
 l0
 L613
 VCgbfYnK[>z`;zo@DFYfgD0
@@ -410,8 +492,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -429,18 +511,18 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
 Efixed_delay_line_sulv
-R23
+R37
 R1
 R2
 R4
-R24
-R25
+R38
+R39
 l0
 L564
 VmEcUT7QdN8;U_PW`DR9OB2
@@ -450,8 +532,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -468,19 +550,19 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
 Efixed_delay_line_unsigned
-R23
+R37
 R0
 R1
 R2
 R4
-R24
-R25
+R38
+R39
 l0
 L662
 VM;E;o2j1<^kJVM@_g?EaP1
@@ -490,8 +572,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -509,32 +591,32 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
 Efk_comb
-Z28 w1525398526
+Z42 w1525628549
 R14
 R18
 R0
 R1
 R2
 R4
-Z29 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_comb.vhd
-Z30 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_comb.vhd
+Z43 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_comb.vhd
+Z44 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_comb.vhd
 l0
 L7
-VKj1`6BT5;oFC1:UDI38PS3
-!s100 S^FF0MfNOWmUNfeBoU4G73
+V8hKJP81M?J;Z]fegFcloi0
+!s100 aDC4Kz<WIj?FQeGb`g9z10
 R7
 32
 R8
 !i10b 1
 R9
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_comb.vhd|
-Z32 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_comb.vhd|
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_comb.vhd|
+Z46 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_comb.vhd|
 !i113 1
 R12
 R13
@@ -544,41 +626,41 @@ R18
 R0
 R1
 R2
-DEx4 work 7 fk_comb 0 22 Kj1`6BT5;oFC1:UDI38PS3
-l26
-L21
-V<T<UFik7:M;G2SEKNKQNk1
-!s100 AeSP=^NH5mR6]X`eZXF^f2
+DEx4 work 7 fk_comb 0 22 8hKJP81M?J;Z]fegFcloi0
+l34
+L27
+VoYZT02JIAI3d;6o7B[K:^2
+!s100 K5L8eUSng^TT2ek^TXkN:1
 R7
 32
 R8
 !i10b 1
 R9
-R31
-R32
+R45
+R46
 !i113 1
 R12
 R13
 Efk_tb
-Z33 w1525397999
+Z47 w1525642305
 R18
 R0
 R1
 R2
 R4
-Z34 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_tb.vhd
-Z35 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_tb.vhd
+Z48 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_tb.vhd
+Z49 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_tb.vhd
 l0
 L6
 VLK@N[XE36JLX2S59PNR[A2
 !s100 I5bV]QJEHo^fEKBG52CAD3
 R7
 32
-R8
+R33
 !i10b 1
 R9
-Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_tb.vhd|
-Z37 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_tb.vhd|
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_tb.vhd|
+Z51 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/FK/fk_tb.vhd|
 !i113 1
 R12
 R13
@@ -587,18 +669,151 @@ R18
 R0
 R1
 R2
-Z38 DEx4 work 5 fk_tb 0 22 LK@N[XE36JLX2S59PNR[A2
-l20
+DEx4 work 5 fk_tb 0 22 LK@N[XE36JLX2S59PNR[A2
+l25
 L9
-Z39 VGJK3DHSn6kRc`;g`[HQd83
-Z40 !s100 1m`AH@DcOkLLUTAl2D0^]0
+V[<MID>@0aM4`ZN:TPkIM12
+!s100 CK]TdVaa2OAELD9OQgl9`3
 R7
 32
-R8
+R33
 !i10b 1
 R9
-R36
-R37
+R50
+R51
+!i113 1
+R12
+R13
+Eik
+Z52 w1525635339
+R18
+R0
+R1
+R2
+R4
+Z53 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik.vhd
+Z54 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik.vhd
+l0
+L6
+VfoOT9^AQ=]A2Z?G`SV9Ml1
+!s100 ZV_]L357E8Xa_5VgDSCz52
+R7
+32
+R33
+!i10b 1
+R34
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik.vhd|
+Z56 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R18
+R0
+R1
+R2
+DEx4 work 2 ik 0 22 foOT9^AQ=]A2Z?G`SV9Ml1
+l31
+L20
+V7@<_O171?UJ7l8HbE=D=R0
+!s100 T1>>YVBJQD>T8k;oRjHQY2
+R7
+32
+R33
+!i10b 1
+R34
+R55
+R56
+!i113 1
+R12
+R13
+Eik_machine
+R47
+R14
+R18
+R0
+R1
+R2
+R4
+Z57 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_machine.vhd
+Z58 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_machine.vhd
+l0
+L7
+VVB8kR`[OVD7;mANX26ho41
+!s100 EVWo<G;`;0T`5[G^RAEZm2
+R7
+32
+R26
+!i10b 1
+R34
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_machine.vhd|
+Z60 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_machine.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R14
+R18
+R0
+R1
+R2
+DEx4 work 10 ik_machine 0 22 VB8kR`[OVD7;mANX26ho41
+l33
+L22
+VKVnP0AQobz9eV^R6_alJj1
+!s100 e7@EBd:QEVJm^J9Q5`a`<1
+R7
+32
+R26
+!i10b 1
+R34
+R59
+R60
+!i113 1
+R12
+R13
+Eik_machine_tb
+Z61 w1525643943
+R14
+R18
+R0
+R1
+R2
+R4
+Z62 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_machine_tb.vhd
+Z63 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_machine_tb.vhd
+l0
+L7
+VOlB3_CRgzXjeQ_He>gQV82
+!s100 97`QlRW1lRWWYadRQG;mh0
+R7
+32
+R26
+!i10b 1
+R27
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_machine_tb.vhd|
+Z65 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_machine_tb.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R14
+R18
+R0
+R1
+R2
+Z66 DEx4 work 13 ik_machine_tb 0 22 OlB3_CRgzXjeQ_He>gQV82
+l22
+L10
+Z67 VMdTJ;diP?LF8G`6i]hBBj1
+Z68 !s100 P48>T7MJ12Rd3UVf3B@E?2
+R7
+32
+R26
+!i10b 1
+R27
+R64
+R65
 !i113 1
 R12
 R13
@@ -606,22 +821,22 @@ Pik_pack
 R0
 R1
 R2
-Z41 w1525397462
+Z69 w1525645415
 R4
-Z42 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_pack.vhd
-Z43 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_pack.vhd
+Z70 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_pack.vhd
+Z71 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_pack.vhd
 l0
 L5
-V<>Y0n`Qd=5=9DNPXG@9g51
-!s100 TJQm0CIR<LeKZ`jR2ojRW1
+VD2JZLTea]4UHL1?F4dcoM1
+!s100 [DFB=hVR6RafOc46FhnFT1
 R7
 32
 b1
-Z44 !s110 1525399308
+Z72 !s110 1525645418
 !i10b 1
-Z45 !s108 1525399308.000000
-Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_pack.vhd|
-Z47 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_pack.vhd|
+Z73 !s108 1525645417.000000
+Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_pack.vhd|
+Z75 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_pack.vhd|
 !i113 1
 R12
 R13
@@ -631,39 +846,127 @@ R0
 R1
 R2
 l0
-L88
-V[H@m_AEPGhobTV:g0@@f_1
-!s100 WKKH6N<e:5:Cc63>?]CV83
+L142
+VG?f>:hi7RRe<36[j:;Tj>0
+!s100 >TPD<@n0VagVhIG4[F:IS1
 R7
 32
-R44
+R72
 !i10b 1
-R45
-R46
-R47
+R73
+R74
+R75
 !i113 1
 R12
 R13
-Emat_3x1
-Z48 w1525399306
+Eik_tb
+Z76 w1525643899
+R14
 R18
 R0
 R1
 R2
 R4
-Z49 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1.vhd
-Z50 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1.vhd
+Z77 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_tb.vhd
+Z78 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_tb.vhd
+l0
+L7
+VRD<cNX4b3ICWjd3FSie6]3
+!s100 YjN_4Zdz6RklSHo2_0?Al0
+R7
+32
+R33
+!i10b 1
+R34
+Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_tb.vhd|
+Z80 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/ik_tb.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R14
+R18
+R0
+R1
+R2
+DEx4 work 5 ik_tb 0 22 RD<cNX4b3ICWjd3FSie6]3
+l21
+L10
+VOzoi_cm^H<G7Q6DVHJ;Hk2
+!s100 la3RUMk[^3AKLa9[eCTE92
+R7
+32
+R33
+!i10b 1
+R34
+R79
+R80
+!i113 1
+R12
+R13
+Ejacobian_t
+Z81 w1525644792
+R18
+R0
+R1
+R2
+R4
+Z82 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/jacobian/jacobian_t.vhd
+Z83 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/jacobian/jacobian_t.vhd
+l0
+L6
+VV6Rg=jJcEB03@m3>`1IMa1
+!s100 giU8_i8SzjbD4gXa:kzjn1
+R7
+32
+R33
+!i10b 1
+R34
+Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/jacobian/jacobian_t.vhd|
+Z85 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/jacobian/jacobian_t.vhd|
+!i113 1
+R12
+R13
+Adataflow
+R18
+R0
+R1
+R2
+DEx4 work 10 jacobian_t 0 22 V6Rg=jJcEB03@m3>`1IMa1
+l22
+L15
+V1lV_^Xf<aDY>aHFlRc^=`3
+!s100 :^VfRd0K_<[^NnR?jnhQ?3
+R7
+32
+R33
+!i10b 1
+R34
+R84
+R85
+!i113 1
+R12
+R13
+Emat_3x1
+Z86 w1525399314
+R18
+R0
+R1
+R2
+R4
+Z87 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1.vhd
+Z88 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1.vhd
 l0
 L6
 V5QcQF;^<c8>9NQ>5U_<l[2
 !s100 hB082_ZMa<<1C;Q8=FoM02
 R7
 32
-Z51 !s110 1525399309
+R8
 !i10b 1
-Z52 !s108 1525399309.000000
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1.vhd|
-Z54 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1.vhd|
+R9
+Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1.vhd|
+Z90 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1.vhd|
 !i113 1
 R12
 R13
@@ -679,34 +982,34 @@ Vh75lU0YM@W?KSho@OQ=Zz3
 !s100 VfEE;CFc^gzJngQHjO;3K1
 R7
 32
-R51
+R8
 !i10b 1
-R52
-R53
-R54
+R9
+R89
+R90
 !i113 1
 R12
 R13
 Emat_3x1_tb
-Z55 w1525039274
+Z91 w1525039274
 R18
 R0
 R1
 R2
 R4
-Z56 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1_tb.vhd
-Z57 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1_tb.vhd
+Z92 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1_tb.vhd
+Z93 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1_tb.vhd
 l0
 L6
 Vm7k:LUFOaMZ[<1cfka?760
 !s100 P3G[`@PaQ5DA6<l3<9aMQ2
 R7
 32
-R51
+R8
 !i10b 1
-R52
-Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1_tb.vhd|
-Z59 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1_tb.vhd|
+R9
+Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1_tb.vhd|
+Z95 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x1_tb.vhd|
 !i113 1
 R12
 R13
@@ -722,34 +1025,34 @@ VeZb`iC:]GPkIGg5cE;IDM3
 !s100 9INde]=5Y0eO<cJCIQ_gA2
 R7
 32
-R51
+R8
 !i10b 1
-R52
-R58
-R59
+R9
+R94
+R95
 !i113 1
 R12
 R13
 Emat_3x3
-Z60 w1525140427
+Z96 w1525140427
 R18
 R0
 R1
 R2
 R4
-Z61 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3.vhd
-Z62 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3.vhd
+Z97 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3.vhd
+Z98 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3.vhd
 l0
 L6
 V8Rk5E0G6BMRz333`24j@j3
 !s100 Rb081P]mYO]9fFcWS1hU^3
 R7
 32
-R44
+R72
 !i10b 1
-R45
-Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3.vhd|
-Z64 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3.vhd|
+Z99 !s108 1525645418.000000
+Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3.vhd|
+Z101 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3.vhd|
 !i113 1
 R12
 R13
@@ -765,34 +1068,34 @@ V>i;WK?L6d^<FX;7X2Da?]0
 !s100 :NANdY6hgSQ14?<CXo4oX3
 R7
 32
-R44
+R72
 !i10b 1
-R45
-R63
-R64
+R99
+R100
+R101
 !i113 1
 R12
 R13
 Emat_3x3_tb
-Z65 w1525140684
+Z102 w1525140684
 R18
 R0
 R1
 R2
 R4
-Z66 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3_tb.vhd
-Z67 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3_tb.vhd
+Z103 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3_tb.vhd
+Z104 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3_tb.vhd
 l0
 L6
 VcJXlGBU54i<V8RTGiK[;V1
 !s100 =C2HA6O<:;84Rk>U^]OVo1
 R7
 32
-R51
+R72
 !i10b 1
-R52
-Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3_tb.vhd|
-Z69 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3_tb.vhd|
+R99
+Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3_tb.vhd|
+Z106 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_3x3_tb.vhd|
 !i113 1
 R12
 R13
@@ -808,23 +1111,23 @@ V`kol9i2C9`e_W97gHS`IW0
 !s100 H[GB[^Tgg_1AT`:[^R90n0
 R7
 32
-R51
+R72
 !i10b 1
-R52
-R68
-R69
+R99
+R105
+R106
 !i113 1
 R12
 R13
 Emat_4x1
-Z70 w1525140460
+Z107 w1525140460
 R18
 R0
 R1
 R2
 R4
-Z71 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1.vhd
-Z72 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1.vhd
+Z108 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1.vhd
+Z109 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1.vhd
 l0
 L6
 VSM=SzXhO6INTnGfB1:FZL3
@@ -833,9 +1136,9 @@ R7
 32
 R8
 !i10b 1
-R52
-Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1.vhd|
-Z74 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1.vhd|
+R9
+Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1.vhd|
+Z111 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1.vhd|
 !i113 1
 R12
 R13
@@ -853,21 +1156,21 @@ R7
 32
 R8
 !i10b 1
-R52
-R73
-R74
+R9
+R110
+R111
 !i113 1
 R12
 R13
 Emat_4x1_tb
-Z75 w1525039955
+Z112 w1525039955
 R18
 R0
 R1
 R2
 R4
-Z76 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1_tb.vhd
-Z77 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1_tb.vhd
+Z113 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1_tb.vhd
+Z114 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1_tb.vhd
 l0
 L6
 VP8GOe3jnb:_XMiK][?=4D1
@@ -877,8 +1180,8 @@ R7
 R8
 !i10b 1
 R9
-Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1_tb.vhd|
-Z79 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1_tb.vhd|
+Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1_tb.vhd|
+Z116 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x1_tb.vhd|
 !i113 1
 R12
 R13
@@ -897,31 +1200,31 @@ R7
 R8
 !i10b 1
 R9
-R78
-R79
+R115
+R116
 !i113 1
 R12
 R13
 Emat_4x4
-Z80 w1525140453
+Z117 w1525140453
 R18
 R0
 R1
 R2
 R4
-Z81 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4.vhd
-Z82 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4.vhd
+Z118 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4.vhd
+Z119 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4.vhd
 l0
 L6
 V_m60m25>9;A5ic_SIi]V32
 !s100 ^Wznhn?KSEUfT]eRlKWVn2
 R7
 32
-R51
+R72
 !i10b 1
-R52
-Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4.vhd|
-Z84 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4.vhd|
+R99
+Z120 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4.vhd|
+Z121 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4.vhd|
 !i113 1
 R12
 R13
@@ -937,34 +1240,34 @@ VD6iLM^MgR]inEc@aZGgmN2
 !s100 YKMORSZ0@VoSO=;]Ec>kn1
 R7
 32
-R51
+R72
 !i10b 1
-R52
-R83
-R84
+R99
+R120
+R121
 !i113 1
 R12
 R13
 Emat_4x4_tb
-Z85 w1525037924
+Z122 w1525037924
 R18
 R0
 R1
 R2
 R4
-Z86 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4_tb.vhd
-Z87 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4_tb.vhd
+Z123 8C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4_tb.vhd
+Z124 FC:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4_tb.vhd
 l0
 L6
 VgH@<:@O]bFjL_Lj:B[;FB0
 !s100 GklN`^CzVK:5E7[I<Cfma1
 R7
 32
-R51
+R72
 !i10b 1
-R52
-Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4_tb.vhd|
-Z89 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4_tb.vhd|
+R99
+Z125 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4_tb.vhd|
+Z126 !s107 C:/Users/Graehme/Documents/College/EECS 392/IK_Repo/vhdl/IK/matrix_multiply/mat_4x4_tb.vhd|
 !i113 1
 R12
 R13
@@ -980,22 +1283,22 @@ Vd_nCQ[`C7mnH33VVom5>b0
 !s100 BEc8YK]<:UghzD`8dzA?53
 R7
 32
-R51
+R72
 !i10b 1
-R52
-R88
-R89
+R99
+R125
+R126
 !i113 1
 R12
 R13
 Epipeline_s
-R23
+R37
 R0
 R1
 R2
 R4
-R24
-R25
+R38
+R39
 l0
 L473
 Vi@8cK??nemD?W:DdWG=4z0
@@ -1005,8 +1308,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -1024,18 +1327,18 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
 Epipeline_slv
-R23
+R37
 R1
 R2
 R4
-R24
-R25
+R38
+R39
 l0
 L383
 V^G@XJcgcCWdKbg=OZ=3:N1
@@ -1045,8 +1348,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -1063,18 +1366,18 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
 Epipeline_sulv
-R23
+R37
 R1
 R2
 R4
-R24
-R25
+R38
+R39
 l0
 L339
 Vlgb6z;Slo6>IkNcN_K^[N0
@@ -1084,8 +1387,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -1102,19 +1405,19 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
 Epipeline_u
-R23
+R37
 R0
 R1
 R2
 R4
-R24
-R25
+R38
+R39
 l0
 L428
 VL3>T9[M=>]h3nT:dY_]0D0
@@ -1124,8 +1427,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -1143,18 +1446,18 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
 Epipeline_ul
-R23
+R37
 R1
 R2
 R4
-R24
-R25
+R38
+R39
 l0
 L297
 V@2H;dJPQHRS[[55]OcEP42
@@ -1164,8 +1467,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -1182,8 +1485,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13
@@ -1191,10 +1494,10 @@ Ppipelining
 R0
 R1
 R2
-R23
+R37
 R4
-R24
-R25
+R38
+R39
 l0
 L72
 VB:7>TO_d6Vgf7SbVhEcMV3
@@ -1204,8 +1507,8 @@ R7
 R8
 !i10b 1
 R9
-R26
-R27
+R40
+R41
 !i113 1
 R12
 R13

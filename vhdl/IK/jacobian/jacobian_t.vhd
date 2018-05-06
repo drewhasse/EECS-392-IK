@@ -16,7 +16,7 @@ architecture dataflow of jacobian_t is
 
   signal e_v, p1_v, p2_v, vce_v, vcemp1_v, vcemp2_v, emp1, emp2 : vec_3;
   signal j_mat : mat_3;
-  signal vec001 : std_logic_vector(95 downto 0) := (0=>'1', others=>'0');
+  signal vec001 : std_logic_vector(95 downto 0) := (16=>'1', others=>'0');
   signal v_cross_e, v_cross_emp1, v_cross_emp2 : std_logic_vector(95 downto 0);
 
 begin

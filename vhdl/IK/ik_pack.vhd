@@ -7,7 +7,8 @@ package ik_pack is
   constant L0 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
   constant L1 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
   constant L2 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
-  constant ALPHA : std_logic_vector(31 downto 00) := "00000000000000001000000000000000";
+  constant ALPHA : std_logic_vector(31 downto 0) := "00000000000000000000100000000000";
+  constant THRESH : signed(31 downto 0) := "00000000000000000001000000000000";
   type vec_3 is array(0 to 2) of std_logic_vector(31 downto 0);
   type vec_4 is array(0 to 3) of std_logic_vector(31 downto 0);
   type mat_3 is array(0 to 2) of vec_3;
@@ -45,6 +46,40 @@ package ik_pack is
     j_out : out std_logic_vector(287 downto 0)
   );
   end component jacobian_t;
+
+  component counter
+  port (
+    clk   : in  std_logic;
+    reset : in  std_logic;
+    hold  : in  std_logic;
+    pulse : out std_logic
+  );
+  end component counter;
+
+  component ik_machine
+  port (
+    clk   : in  std_logic;
+    reset : in  std_logic;
+    pulse : in  std_logic;
+    destx : in  std_logic_vector(31 downto 0);
+    desty : in  std_logic_vector(31 downto 0);
+    a0    : out std_logic_vector(31 downto 0);
+    a1    : out std_logic_vector(31 downto 0);
+    a2    : out std_logic_vector(31 downto 0)
+  );
+  end component ik_machine;
+
+  component ik
+  port (
+    clk   : in  std_logic;
+    reset : in  std_logic;
+    destx : in  std_logic_vector(31 downto 0);
+    desty : in  std_logic_vector(31 downto 0);
+    a0    : out std_logic_vector(31 downto 0);
+    a1    : out std_logic_vector(31 downto 0);
+    a2    : out std_logic_vector(31 downto 0)
+  );
+  end component ik;
 
   component fk_comb
     port (
