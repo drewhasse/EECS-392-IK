@@ -7,6 +7,7 @@ package ik_pack is
   constant L0 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
   constant L1 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
   constant L2 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
+  constant alpha : std_logic_vector(31 downto 00) := "00000000000000001000000000000000";
   type vec_3 is array(0 to 2) of std_logic_vector(31 downto 0);
   type vec_4 is array(0 to 3) of std_logic_vector(31 downto 0);
   type mat_3 is array(0 to 2) of vec_3;
@@ -31,6 +32,16 @@ package ik_pack is
                        return vec_3;
   function rads_to_brads (rads : std_logic_vector(31 downto 0))
                        return signed;
+
+  component jacobian_t
+  port (
+    e     : in  std_logic_vector(95 downto 0);
+    p1    : in  std_logic_vector(95 downto 0);
+    p2    : in  std_logic_vector(95 downto 0);
+    j_out : out std_logic_vector(287 downto 0)
+  );
+  end component jacobian_t;
+
   component fk_comb
     port (
       clk : in std_logic;
