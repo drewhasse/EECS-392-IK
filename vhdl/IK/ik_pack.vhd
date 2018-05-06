@@ -7,7 +7,7 @@ package ik_pack is
   constant L0 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
   constant L1 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
   constant L2 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
-  constant alpha : std_logic_vector(31 downto 00) := "00000000000000001000000000000000";
+  constant ALPHA : std_logic_vector(31 downto 00) := "00000000000000001000000000000000";
   type vec_3 is array(0 to 2) of std_logic_vector(31 downto 0);
   type vec_4 is array(0 to 3) of std_logic_vector(31 downto 0);
   type mat_3 is array(0 to 2) of vec_3;
@@ -29,6 +29,10 @@ package ik_pack is
   function vec_4_to_slv (vec : vec_4)
                        return std_logic_vector;
   function vec_3_sub (v1 : vec_3; v2 : vec_3)
+                       return vec_3;
+  function vec_3_add (v1 : vec_3; v2 : vec_3)
+                       return vec_3;
+  function vec_3_mul (v1 : vec_3; v2 : vec_3)
                        return vec_3;
   function rads_to_brads (rads : std_logic_vector(31 downto 0))
                        return signed;
@@ -231,6 +235,26 @@ begin
   vout(2) := std_logic_vector(signed(v1(2))-signed(v2(2)));
   return vout;
 end vec_3_sub;
+
+function vec_3_add (v1 : vec_3; v2 : vec_3)
+                     return vec_3 is
+  variable vout : vec_3;
+begin
+  vout(0) := std_logic_vector(signed(v1(0))+signed(v2(0)));
+  vout(1) := std_logic_vector(signed(v1(1))+signed(v2(1)));
+  vout(2) := std_logic_vector(signed(v1(2))+signed(v2(2)));
+  return vout;
+end vec_3_add;
+
+function vec_3_mul (v1 : vec_3; v2 : vec_3)
+                     return vec_3 is
+  variable vout : vec_3;
+begin
+  vout(0) := std_logic_vector(resize(unsigned((signed(v1(0))*signed(v2(0))) SRL 16), 32));
+  vout(1) := std_logic_vector(resize(unsigned((signed(v1(1))*signed(v2(1))) SRL 16), 32));
+  vout(2) := std_logic_vector(resize(unsigned((signed(v1(2))*signed(v2(2))) SRL 16), 32));
+  return vout;
+end vec_3_mul;
 
 function rads_to_brads (rads : std_logic_vector(31 downto 0))
                      return signed is

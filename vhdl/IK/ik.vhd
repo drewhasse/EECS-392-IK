@@ -25,7 +25,10 @@ architecture behavioral of ik is
   signal current_s, next_s : state;
   signal arot_i, arot_i_c, a0_i, a0_i_c, a1_i, a1_i_c, a2_i, a2_i_c : std_logic_vector(31 downto 0);
   signal arot_step, arot_step_c, a0_step, a0_step_c, a1_step, a1_step_c, a2_step, a2_step_c : std_logic_vector(31 downto 0);
+  signal dest, rot : std_logic_vector(95 downto 0);
   signal e, p1, p2 : std_logic_vector(95 downto 0);
+  signal delta_e, delta_theta : std_logic_vector(95 downto 0);
+  signal alpha_vec : vec_3;
   signal j_out : std_logic_vector(287 downto 0);
 
   begin
@@ -58,10 +61,6 @@ architecture behavioral of ik is
       begin
       --Internal state signals
       next_s <= current_s;
-      arot_i_c <= arot_i;
-      a0_i_c <= a0_i;
-      a1_i_c <= a1_i;
-      a2_i_c <= a2_i;
       --- outputs
       arot_step_c <= arot_step;
       a0_step_c <= a0_step;
@@ -82,11 +81,11 @@ architecture behavioral of ik is
       a1  => a1_i,
       a2  => a2_i,
       ex  => e(95 downto 64),
-      ey  => e(64 downto 32),
+      ey  => e(63 downto 32),
       p1x => p1(95 downto 64),
-      p1y => p1(64 downto 32),
+      p1y => p1(63 downto 32),
       p2x => p2(95 downto 64),
-      p2y => p2(64 downto 32)
+      p2y => p2(63 downto 32)
     );
     e(31 downto 0) <= (others => '0');
     p1(31 downto 0) <= (others => '0');
@@ -99,5 +98,26 @@ architecture behavioral of ik is
       p2    => p2,
       j_out => j_out
     );
+
+    dest(95 downto 64) <= destx;
+    dest(63 downto 32) <= desty;
+    dest(31 downto 0) <= (others => '0');
+
+    delta_e <= vec_3_to_slv(vec_3_sub(slv_to_vec_3(dest);slv_to_vec_3(e)));
+
+    mat_3x1_delta_theta : mat_3x1
+    port map (
+      mat_3_l_in => j_out,
+      vec_3_r_in => delta_e,
+      vec_3_out => delta_theta
+    );
+
+    alpha_vec(0)<=ALPHA;
+    alpha_vec(1)<=ALPHA;
+    alpha_vec(2)<=ALPHA;
+
+
+
+
 
 end architecture;
