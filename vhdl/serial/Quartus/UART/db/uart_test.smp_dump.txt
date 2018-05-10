@@ -1,0 +1,8 @@
+
+State Machine - |uart_test|UART_R:UART_R_i|curr_state
+Name curr_state.stp_hold curr_state.stp curr_state.data curr_state.start curr_state.idle 
+curr_state.idle 0 0 0 0 0 
+curr_state.start 0 0 0 1 1 
+curr_state.data 0 0 1 0 1 
+curr_state.stp 0 1 0 0 1 
+curr_state.stp_hold 1 0 0 0 1 
