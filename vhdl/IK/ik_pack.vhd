@@ -47,6 +47,16 @@ package ik_pack is
   );
   end component jacobian_t;
 
+  component PWM
+  port (
+    clk   : in  std_logic;
+    reset : in  std_logic;
+    hold  : in  std_logic;
+    sig   : in  std_logic;
+    pulse : out std_logic
+  );
+  end component PWM;
+
   component counter
   port (
     clk   : in  std_logic;
