@@ -61,6 +61,7 @@ begin
       stop_sig_c <= stop_sig;
       clk_count_c <= clk_count;
       next_state <= curr_state;
+      index_c <= index;
 -----------OUTPUTS----------
       RX_byte <= byte;
       RX_DV <= stop_sig;

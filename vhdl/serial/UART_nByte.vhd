@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity UART_nByte is
   generic (
-    n : natural;
+    constant n : natural := 4;
     CLKS_PER_BIT : natural := 868
   );
   port (
@@ -30,7 +30,7 @@ architecture arch of UART_nByte is
     );
   end component UART_R;
 
-  type state is (idle, wait_for_byte, done);
+  type state is (idle, wait_for_byte, shift, done);
   signal curr_state, next_state : state := idle;
   signal bytes : std_logic_vector(n*8-1 downto 0) := (others => '0');
   signal bytes_c : std_logic_vector(n*8-1 downto 0) := (others => '0');
@@ -52,14 +52,12 @@ begin
         curr_state <= idle;
         bytes <= (others => '0');
         valid <= '0';
-        count <= 0;
+        count <= n;
       elsif (rising_edge(clk)) then
         curr_state <= next_state;
         bytes <= bytes_c;
         valid <= valid_c;
         count <= count_c;
-        --RX_DV <= RX_DV_c;
-        --RX_byte <= RX_byte_c;
       end if;
     end process;
 
@@ -72,33 +70,41 @@ begin
       bytes_c <= bytes;
       valid_c <= valid;
       count_c <= count;
-      --RX_DV_c <= RX_DV;
-      RX_byte_c <= RX_byte;
       next_state <= curr_state;
       case (curr_state) is
         when (idle) =>
           if (RX_DV = '1') then
-            next_state <= wait_for_byte;
-            bytes_c(count*8-1 downto (count-1)*8) <= RX_byte;
+            bytes_c(n*8-1 downto (n-1)*8) <= RX_byte;
             count_c <= count - 1;
             valid_c <= '0';
+            next_state <= shift;
           else
             next_state <= idle;
           end if;
 
         when (wait_for_byte) =>
-          if (count_c > 0) then
+          if (count > 0) then
             next_state <= wait_for_byte;
             if (RX_DV = '1') then
-              bytes_c(count*8-1 downto (count-1)*8) <= RX_byte;
+              bytes_c(n*8-1 downto (n-1)*8) <= RX_byte;
               count_c <= count - 1;
+              next_state <= shift;
             end if;
           else
             next_state <= done;
           end if;
 
+        when (shift) =>
+          if (count = 0) then
+            next_state <= done;
+          else
+            bytes_c <= std_logic_vector(unsigned(bytes) srl 8);
+            next_state <= wait_for_byte;
+          end if;
+
         when (done) =>
           valid_c <= '1';
+          count_c <= n;
           next_state <= idle;
         end case;
     end process;

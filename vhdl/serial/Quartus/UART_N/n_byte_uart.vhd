@@ -1,0 +1,63 @@
+library ieee;
+  use ieee.std_logic_1164.all;
+  use ieee.numeric_std.all;
+
+entity n_byte_uart is
+  generic (
+    constant n : natural := 4;
+    CLKS_PER_BIT : natural := 868 --57600, 434 = 115200
+  );
+  port (
+  clk : in std_logic;
+  reset : in std_logic;
+  RX : in std_logic;
+  LED_o : out std_logic;
+  data_valid : out std_logic;
+  dout : out std_logic_vector(n*8-1 downto 0)
+  );
+end entity;
+
+architecture arch of n_byte_uart is
+  component UART_nByte
+    generic (
+      n            : natural;
+      CLKS_PER_BIT : natural := 868
+    );
+    port (
+      clk        : in  std_logic;
+      reset      : in  std_logic;
+      RX         : in  std_logic;
+      dout       : out std_logic_vector(n*8-1 downto 0);
+      data_valid : out std_logic
+    );
+  end component UART_nByte;
+
+  component UART_R
+    generic (
+      CLKS_PER_BIT : natural := 868
+    );
+    port (
+      clk     : in  std_logic;
+      reset   : in  std_logic;
+      RX      : in  std_logic;
+      RX_DV   : out std_logic;
+      RX_byte : out std_logic_vector(7 downto 0)
+    );
+  end component UART_R;
+
+begin
+  UART_nByte_i : UART_nByte
+    generic map (
+      n            => n,
+      CLKS_PER_BIT => CLKS_PER_BIT
+    )
+    port map (
+      clk        => clk,
+      reset      => reset,
+      RX         => RX,
+      dout       => dout,
+      data_valid => data_valid
+    );
+
+
+end architecture;
