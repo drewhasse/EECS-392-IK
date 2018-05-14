@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity PWM is
+entity PWM_test is
   port (
   clk : in std_logic;
   reset : in std_logic;
@@ -13,7 +13,7 @@ entity PWM is
   );
 end entity;
 
-architecture behavioral of PWM is
+architecture behavioral of PWM_test is
 type state is (increment, hold_s);
 signal current_s, next_s : state;
 signal count_width, count_width_c, count_pulse, count_pulse_c : std_logic_vector(31 downto 0);
@@ -26,7 +26,7 @@ begin
       if (reset = '1') then
         count_pulse <= (others => '0');
         count_width <= "00000000000011110100001001000000";
-        pulse_length <= (others => '0');
+        pulse_length <= "00000000000000010010010011111000";
         pulse_gate <= '0';
         pulseint <= '0';
         current_s <= increment;
@@ -43,7 +43,7 @@ begin
   combinational : process(count_width, count_pulse, pulseint, pulse_gate, current_s) is
     constant one : std_logic_vector(31 downto 0) := (0 => '1', others => '0');
     constant zero : std_logic_vector(31 downto 0) := (others => '0');
-    constant inc : std_logic_vector(31 downto 0) := "00000000000000000000001111101000";
+    constant inc : std_logic_vector(31 downto 0) := "00000000000000000000001000000000";
     begin
     --Internal state signals
     count_width_c <= count_width;
@@ -65,9 +65,9 @@ begin
             pulse_gate_c <= '1';
             pulseint_c <= '1';
             count_width_c <= "00000000000011110100001001000000";
-            if (button1 = '0') then
+            if (button1 = '0' AND unsigned(pulse_length) < unsigned(std_logic_vector'("00000000000000011110100001001000"))) then
               pulse_length_c <= std_logic_vector(unsigned(pulse_length) + unsigned(inc));
-            elsif (button2 = '0' AND unsigned(pulse_length) > unsigned(inc)) then
+            elsif (button2 = '0' AND unsigned(pulse_length) > unsigned(std_logic_vector'("00000000000000000110000110101000"))) then
               pulse_length_c <= std_logic_vector(unsigned(pulse_length) - unsigned(inc));
             end if;
           end if;
