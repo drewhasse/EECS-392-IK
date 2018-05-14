@@ -20,14 +20,12 @@ architecture behavioral of UART_R is
 
   type state is (idle, start, data, stp, stp_hold);
   signal curr_state, next_state : state;
-  signal byte : std_logic_vector(7 downto 0);
-  signal byte_c : std_logic_vector(7 downto 0);
-  signal DV : std_logic;
-  signal DV_c : std_logic;
-  signal stop_sig : std_logic;
-  signal stop_sig_c : std_logic;
-  signal RX_data : std_logic;
-  signal RX_data_i : std_logic;
+  signal byte : std_logic_vector(7 downto 0) := x"00";
+  signal byte_c : std_logic_vector(7 downto 0) := x"00";
+  signal stop_sig : std_logic := '0';
+  signal stop_sig_c : std_logic := '0';
+  signal RX_data : std_logic := '0';
+  signal RX_data_i : std_logic := '0';
 
   signal clk_count : natural := 0;
   signal clk_count_c : natural := 0;
@@ -75,6 +73,7 @@ begin
             stop_sig_c <= '0';
             clk_count_c <= 0;
             index_c <= 7;
+            byte_c <= x"00";
           else
             next_state <= idle;
           end if;
@@ -120,6 +119,7 @@ begin
 --- HOLD STOP SIGNAL HIGH
         when (stp_hold) =>
           stop_sig_c <= '0';
+          next_state <= idle;
       end case;
     end process;
 end architecture;

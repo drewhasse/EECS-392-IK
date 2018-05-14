@@ -1,0 +1,420 @@
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd failed with 3 errors.
+# Compile of UART_nByte_tb.vhd failed with 6 errors.
+# 3 compiles, 2 failed with 9 errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd failed with 6 errors.
+# 3 compiles, 1 failed with 6 errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd failed with 4 errors.
+# 3 compiles, 1 failed with 4 errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd failed with 3 errors.
+# 3 compiles, 1 failed with 3 errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd failed with 3 errors.
+# 3 compiles, 1 failed with 3 errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# Load canceled
+vsim -gui work.uart_r_tb
+# vsim -gui work.uart_r_tb 
+# Start time: 15:36:33 on May 14,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+add wave -r sim:/uart_r_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: drew0  Hostname: DREW-ASUS  ProcessID: 10768
+#           Attempting to use alternate WLF file "./wlftj437gt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftj437gt
+run
+run -all
+quit -sim
+# End time: 15:44:43 on May 14,2018, Elapsed time: 0:08:10
+# Errors: 0, Warnings: 2
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.uart_r_tb
+# vsim -gui work.uart_r_tb 
+# Start time: 15:48:27 on May 14,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+add wave -r sim:/uart_r_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: drew0  Hostname: DREW-ASUS  ProcessID: 10768
+#           Attempting to use alternate WLF file "./wlftkskb7e".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkskb7e
+run -all
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 32 (255 downto 224). Right is 8 (7 downto 0).
+#    Time: 165170 ns  Iteration: 3  Process: /uart_r_tb/UART_nByte_i/comb_proc_nB File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd
+# Fatal error in Process comb_proc_nB at D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd line 82
+# 
+# HDL call sequence:
+# Stopped at D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd 82 Process comb_proc_nB
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd 82 Process comb_proc_nB
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd 82 Process comb_proc_nB
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd 82 Process comb_proc_nB
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd 82 Process comb_proc_nB
+# 
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+add wave -r sim:/uart_r_tb/*
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd 82 Process comb_proc_nB
+# 
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 32 (255 downto 224). Right is 8 (7 downto 0).
+#    Time: 165170 ns  Iteration: 3  Process: /uart_r_tb/UART_nByte_i/comb_proc_nB File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd
+# Fatal error in Process comb_proc_nB at D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd line 82
+# 
+# HDL call sequence:
+# Stopped at D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd 82 Process comb_proc_nB
+# 
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 32 (223 downto 192). Right is 8 (7 downto 0).
+#    Time: 165190 ns  Iteration: 2  Process: /uart_r_tb/UART_nByte_i/comb_proc_nB File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd
+# Fatal error in Process comb_proc_nB at D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd line 93
+# 
+# HDL call sequence:
+# Stopped at D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd 93 Process comb_proc_nB
+# 
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# ** Fatal: (vsim-3348) Port length (65) does not match actual length (257) for port "/uart_r_tb/UART_nByte_i/dout".
+#    Time: 0 ps  Iteration: 0  Instance: /uart_r_tb/UART_nByte_i File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 14
+# FATAL ERROR while loading design
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.uart_r_tb
+# vsim -gui work.uart_r_tb 
+# Start time: 15:48:27 on May 14,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+add wave -r sim:/uart_r_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: drew0  Hostname: DREW-ASUS  ProcessID: 10768
+#           Attempting to use alternate WLF file "./wlftma3gwg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftma3gwg
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# Error: Acs sdne.
+# xl≤>aë˘ˆÄU ÷‚xl∂:2ë˘ÄU ÷◊xl™&}{ ê
+#        Unable to replace existing ini file (D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/sim/UART_nByte_sim.mpf).  File can not be renamed.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd failed with 12 errors.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 1 failed with 12 errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd failed with 3 errors.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 1 failed with 3 errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+add wave -r sim:/uart_r_tb/*
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+quit -sim
+# End time: 16:16:07 on May 14,2018, Elapsed time: 0:27:40
+# Errors: 12, Warnings: 4
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.uart_r_tb
+# vsim -gui work.uart_r_tb 
+# Start time: 16:16:16 on May 14,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+add wave -r sim:/uart_r_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: drew0  Hostname: DREW-ASUS  ProcessID: 10768
+#           Attempting to use alternate WLF file "./wlftx2crae".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftx2crae
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd failed with 9 errors.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 1 failed with 9 errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# Error: Acs sdne.
+# 0
+#        Unable to replace existing ini file (D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/sim/UART_nByte_sim.mpf).  File can not be renamed.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+quit -sim
+# End time: 16:22:53 on May 14,2018, Elapsed time: 0:06:37
+# Errors: 0, Warnings: 2
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.uart_r_tb
+# vsim -gui work.uart_r_tb 
+# Start time: 16:23:01 on May 14,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+add wave -r sim:/uart_r_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: drew0  Hostname: DREW-ASUS  ProcessID: 10768
+#           Attempting to use alternate WLF file "./wlftji45s4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftji45s4
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# WARNING: No extended dataflow license exists
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# Loading work.uart_r(behavioral)
+run -all
+run
+run
+run
+# Compile of UART_R.vhd was successful.
+# Compile of UART_nByte.vhd was successful.
+# Compile of UART_nByte_tb.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.uart_r_tb(behavioral)
+# Loading work.uart_nbyte(arch)
+# ** Fatal: (vsim-3348) Port length (32) does not match actual length (64) for port "/uart_r_tb/UART_nByte_i/dout".
+#    Time: 0 ps  Iteration: 0  Instance: /uart_r_tb/UART_nByte_i File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 14
+# FATAL ERROR while loading design
