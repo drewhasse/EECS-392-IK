@@ -26,14 +26,14 @@ begin
       if (reset = '1') then
         count_pulse <= (others => '0');
         count_width <= "00000000000011110100001001000000";
-        pulse_length <= "00000000000000010010010011111000";
+        pulse_length <= "00000000000000011110100001001000";
         pulse_gate <= '0';
         pulseint <= '0';
         current_s <= increment;
       elsif (rising_edge(clk)) then
         count_width <= count_width_c;
         count_pulse <= count_pulse_c;
-        pulse_length <= pulse_length_c
+        pulse_length <= pulse_length_c;
         pulse_gate <= pulse_gate_c;
         pulseint <= pulseint_c;
         current_s <= next_s;
@@ -43,7 +43,7 @@ begin
   combinational : process(count_width, count_pulse, pulseint, pulse_gate, current_s) is
     constant one : std_logic_vector(31 downto 0) := (0 => '1', others => '0');
     constant zero : std_logic_vector(31 downto 0) := (others => '0');
-    constant inc : std_logic_vector(31 downto 0) := "00000000000000000000001000000000";
+    constant inc : std_logic_vector(31 downto 0) := "00000000000000000000100000000000";
     begin
     --Internal state signals
     count_width_c <= count_width;
@@ -65,9 +65,9 @@ begin
             pulse_gate_c <= '1';
             pulseint_c <= '1';
             count_width_c <= "00000000000011110100001001000000";
-            if (button1 = '0' AND unsigned(pulse_length) < unsigned(std_logic_vector'("00000000000000011110100001001000"))) then
+            if (button1 = '0') then-- AND unsigned(pulse_length) < unsigned(std_logic_vector'("00000000000000011110100001001000"))) then
               pulse_length_c <= std_logic_vector(unsigned(pulse_length) + unsigned(inc));
-            elsif (button2 = '0' AND unsigned(pulse_length) > unsigned(std_logic_vector'("00000000000000000110000110101000"))) then
+            elsif (button2 = '0' AND unsigned(pulse_length) > unsigned(std_logic_vector'("00000000000000000000000000000000"))) then
               pulse_length_c <= std_logic_vector(unsigned(pulse_length) - unsigned(inc));
             end if;
           end if;
