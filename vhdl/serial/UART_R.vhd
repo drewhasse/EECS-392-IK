@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 entity UART_R is
   generic (
 --- Baud rate = 57,600
-    CLKS_PER_BIT : natural := 868
+    CLKS_PER_BIT : natural := 434
   );
   port (
     clk : in std_logic;
@@ -41,7 +41,7 @@ begin
         stop_sig <= '0';
         RX_data <= '0';
         clk_count <= 0;
-        index <= 7;
+        index <= 0;
       elsif (rising_edge(clk)) then
     ----- double register to solve metastability issues---
         RX_data_i <= RX;
@@ -73,7 +73,7 @@ begin
             next_state <= start;
             stop_sig_c <= '0';
             clk_count_c <= 0;
-            index_c <= 7;
+            index_c <= 0;
             byte_c <= x"00";
           else
             next_state <= idle;
@@ -99,8 +99,8 @@ begin
           else
             clk_count_c <= 0;
             byte_c(index) <= RX_data;
-            if (index > 0) then
-              index_c <= index - 1;
+            if (index < 7) then
+              index_c <= index + 1;
               next_state <= data;
             else
               index_c <= 0;
@@ -110,7 +110,7 @@ begin
 --- END OF DATA STATE
         when (stp) =>
           if (clk_count < CLKS_PER_BIT) then
-            clk_count_c <= clk_count_c + 1;
+            clk_count_c <= clk_count + 1;
             next_state <= stp;
           else
             stop_sig_c <= '1';

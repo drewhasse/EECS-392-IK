@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity UART_nByte is
   generic (
     constant n : natural := 4;
-    CLKS_PER_BIT : natural := 868
+    CLKS_PER_BIT : natural := 434
   );
   port (
   clk : in std_logic;
@@ -19,7 +19,7 @@ end entity;
 architecture arch of UART_nByte is
   component UART_R
     generic (
-      CLKS_PER_BIT : natural := 868
+      CLKS_PER_BIT : natural := 434
     );
     port (
       clk     : in  std_logic;
@@ -42,7 +42,6 @@ architecture arch of UART_nByte is
   signal RX_DV : std_logic := '0';
   signal RX_DV_c : std_logic := '0';
   signal RX_byte : std_logic_vector(7 downto 0);
-  signal RX_byte_c : std_logic_vector(7 downto 0);
   signal test_RXB : std_logic_vector(7 downto 0) := x"00";
 
 begin
@@ -74,7 +73,7 @@ begin
       case (curr_state) is
         when (idle) =>
           if (RX_DV = '1') then
-            bytes_c(n*8-1 downto (n-1)*8) <= RX_byte;
+            bytes_c(7 downto 0) <= RX_byte;
             count_c <= count - 1;
             valid_c <= '0';
             next_state <= shift;
@@ -86,7 +85,7 @@ begin
           if (count > 0) then
             next_state <= wait_for_byte;
             if (RX_DV = '1') then
-              bytes_c(n*8-1 downto (n-1)*8) <= RX_byte;
+              bytes_c(7 downto 0) <= RX_byte;
               count_c <= count - 1;
               next_state <= shift;
             end if;
@@ -98,7 +97,7 @@ begin
           if (count = 0) then
             next_state <= done;
           else
-            bytes_c <= std_logic_vector(unsigned(bytes) srl 8);
+            bytes_c <= std_logic_vector(unsigned(bytes) sll 8);
             next_state <= wait_for_byte;
           end if;
 

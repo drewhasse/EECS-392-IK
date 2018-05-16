@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "LED_o",
+					"strict" : false
+				},
+				{
 					"name" : "data_valid",
 					"strict" : false
 				},
@@ -21,10 +25,6 @@
 				},
 				{
 					"name" : "dout[3]",
-					"strict" : false
-				},
-				{
-					"name" : "dout[4]",
 					"strict" : false
 				},
 				{
@@ -52,10 +52,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "dout[11]",
-					"strict" : false
-				},
-				{
 					"name" : "dout[12]",
 					"strict" : false
 				},
@@ -77,10 +73,6 @@
 				},
 				{
 					"name" : "dout[17]",
-					"strict" : false
-				},
-				{
-					"name" : "dout[18]",
 					"strict" : false
 				},
 				{
@@ -108,10 +100,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "dout[25]",
-					"strict" : false
-				},
-				{
 					"name" : "dout[26]",
 					"strict" : false
 				},
@@ -136,15 +124,47 @@
 					"strict" : false
 				},
 				{
+					"name" : "dout[33]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[34]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[35]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[36]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[37]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[38]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[40]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[41]",
+					"strict" : false
+				},
+				{
+					"name" : "RX",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
 					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "RX",
 					"strict" : false
 				}
 			]

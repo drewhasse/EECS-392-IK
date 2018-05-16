@@ -49,10 +49,59 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VHDL_FILE n_byte_uart.vhd
-set_global_assignment -name VHDL_FILE ../../UART_R.vhd
-set_global_assignment -name VHDL_FILE ../../UART_nByte.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_E21 -to LED_o
+set_location_assignment PIN_G12 -to RX
+set_location_assignment PIN_G19 -to data_valid
+set_location_assignment PIN_Y2 -to clk
+set_location_assignment PIN_H15 -to LED2
+set_location_assignment PIN_M23 -to reset
+set_location_assignment PIN_AH18 -to dout[41]
+set_location_assignment PIN_AF18 -to dout[40]
+set_location_assignment PIN_AH19 -to dout[38]
+set_location_assignment PIN_AG19 -to dout[39]
+set_location_assignment PIN_AB18 -to dout[37]
+set_location_assignment PIN_AC18 -to dout[36]
+set_location_assignment PIN_AD18 -to dout[35]
+set_location_assignment PIN_AE18 -to dout[34]
+set_location_assignment PIN_AF19 -to dout[33]
+set_location_assignment PIN_AE19 -to dout[32]
+set_location_assignment PIN_AH21 -to dout[31]
+set_location_assignment PIN_AG21 -to dout[30]
+set_location_assignment PIN_AA19 -to dout[29]
+set_location_assignment PIN_AB19 -to dout[28]
+set_location_assignment PIN_Y19 -to dout[27]
+set_location_assignment PIN_AF23 -to dout[26]
+set_location_assignment PIN_AD24 -to dout[25]
+set_location_assignment PIN_AA21 -to dout[24]
+set_location_assignment PIN_AB20 -to dout[23]
+set_location_assignment PIN_U21 -to dout[22]
+set_location_assignment PIN_V21 -to dout[21]
+set_location_assignment PIN_W28 -to dout[20]
+set_location_assignment PIN_W27 -to dout[19]
+set_location_assignment PIN_Y26 -to dout[18]
+set_location_assignment PIN_W26 -to dout[17]
+set_location_assignment PIN_Y25 -to dout[16]
+set_location_assignment PIN_AA26 -to dout[15]
+set_location_assignment PIN_AA25 -to dout[14]
+set_location_assignment PIN_U24 -to dout[13]
+set_location_assignment PIN_U23 -to dout[12]
+set_location_assignment PIN_W25 -to dout[11]
+set_location_assignment PIN_W22 -to dout[10]
+set_location_assignment PIN_W21 -to dout[9]
+set_location_assignment PIN_Y22 -to dout[8]
+set_location_assignment PIN_M24 -to dout[7]
+set_location_assignment PIN_H22 -to dout[6]
+set_location_assignment PIN_J22 -to dout[5]
+set_location_assignment PIN_L25 -to dout[4]
+set_location_assignment PIN_L26 -to dout[3]
+set_location_assignment PIN_E17 -to dout[2]
+set_location_assignment PIN_F22 -to dout[1]
+set_location_assignment PIN_G18 -to dout[0]
+set_global_assignment -name VHDL_FILE leddcd.vhd
+set_global_assignment -name VHDL_FILE n_byte_uart.vhd
+set_global_assignment -name VHDL_FILE ../../UART_R.vhd
+set_global_assignment -name VHDL_FILE ../../UART_nByte.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
