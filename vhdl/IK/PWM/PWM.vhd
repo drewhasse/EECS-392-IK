@@ -2,16 +2,17 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity PWM_test is
+entity PWM is
   port (
   clk : in std_logic;
   reset : in std_logic;
   hold : in std_logic;
+  length : in std_logic_vector(31 downto 0);
   pulse : out std_logic
   );
 end entity;
 
-architecture behavioral of PWM_test is
+architecture behavioral of PWM is
 type state is (increment, hold_s);
 signal current_s, next_s : state;
 signal count_width, count_width_c, count_pulse, count_pulse_c : std_logic_vector(31 downto 0);
@@ -31,7 +32,7 @@ begin
       elsif (rising_edge(clk)) then
         count_width <= count_width_c;
         count_pulse <= count_pulse_c;
-        pulse_length <= pulse_length_c
+        pulse_length <= pulse_length_c;
         pulse_gate <= pulse_gate_c;
         pulseint <= pulseint_c;
         current_s <= next_s;
@@ -41,7 +42,7 @@ begin
   combinational : process(count_width, count_pulse, pulseint, pulse_gate, current_s) is
     constant one : std_logic_vector(31 downto 0) := (0 => '1', others => '0');
     constant zero : std_logic_vector(31 downto 0) := (others => '0');
-    constant inc : std_logic_vector(31 downto 0) := "00000000000000000000001000000000";
+    constant inc : std_logic_vector(31 downto 0) := "00000000000000000000100000000000";
     begin
     --Internal state signals
     count_width_c <= count_width;
@@ -50,6 +51,7 @@ begin
     pulse_gate_c <= pulse_gate;
     next_s <= current_s;
     pulseint_c <= pulseint;
+    pulse_length_c <= length;
     --Output
     pulse <= pulseint;
 

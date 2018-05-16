@@ -7,6 +7,8 @@ package ik_pack is
   constant L0 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
   constant L1 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
   constant L2 : std_logic_vector(31 downto 0) := "00000000000000010000000000000000";
+  constant MAX_PULSE : std_logic_vector(33 downto 0) := "1111010000100100000000000000000000";
+  constant MIN_PULSE : std_logic_vector(33 downto 0) := "0011000011010100000000000000000000"
   constant ALPHA : std_logic_vector(31 downto 0) := "00000000000000000000100000000000";
   constant THRESH : signed(31 downto 0) := "00000000000000000001000000000000";
   type vec_3 is array(0 to 2) of std_logic_vector(31 downto 0);
@@ -37,6 +39,8 @@ package ik_pack is
                        return vec_3;
   function rads_to_brads (rads : std_logic_vector(31 downto 0))
                        return signed;
+  function rads_to_pulse (rads : std_logic_vector(31 downto 0))
+                       return std_logic_vector;
 
   component jacobian_t
   port (
@@ -49,11 +53,11 @@ package ik_pack is
 
   component PWM
   port (
-    clk   : in  std_logic;
-    reset : in  std_logic;
-    hold  : in  std_logic;
-    sig   : in  std_logic;
-    pulse : out std_logic
+    clk    : in  std_logic;
+    reset  : in  std_logic;
+    hold   : in  std_logic;
+    length : in  std_logic_vector(31 downto 0);
+    pulse  : out std_logic
   );
   end component PWM;
 
@@ -306,5 +310,21 @@ function rads_to_brads (rads : std_logic_vector(31 downto 0))
 begin
   return signed( resize((((resize(signed(rads),48) SLL 16) / signed(TWO_PI)) SLL 16),32));
 end rads_to_brads;
+
+function rads_to_pulse (rads : std_logic_vector(31 downto 0))
+                     return signed is
+  variable pos, norm, max_min, scaled : signed(31 downto 0);
+begin
+  pos := signed(rads) + signed'("00000000000000011001001000011111");
+  if(pos > signed'("00000000000000110010010000111111")) then
+    pos := "00000000000000110010010000111111";
+  elsif(pos < signed(X"00000000")) then
+    pos := (others => '0');
+  end if;
+  norm := resize(((resize(pos,48) SLL 16) / signed("00000000000000110010010000111111")),32);
+  max_min := signed(MAX_PULSE) - signed(MIN_PULSE);
+  scaled := resize(unsigned((norm*max_min) SRL 17),32)
+  return std_logic_vector(scaled + resize(unsigned(MIN_PULSE SRL 1),32));
+end rads_to_pulse;
 
 end package body ik_pack;
