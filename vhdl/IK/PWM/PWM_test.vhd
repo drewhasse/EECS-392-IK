@@ -43,7 +43,7 @@ begin
   combinational : process(count_width, count_pulse, pulseint, pulse_gate, current_s) is
     constant one : std_logic_vector(31 downto 0) := (0 => '1', others => '0');
     constant zero : std_logic_vector(31 downto 0) := (others => '0');
-    constant inc : std_logic_vector(31 downto 0) := "00000000000000000000100000000000";
+    constant inc : std_logic_vector(31 downto 0) := "00000000000000000000000100000000";
     begin
     --Internal state signals
     count_width_c <= count_width;

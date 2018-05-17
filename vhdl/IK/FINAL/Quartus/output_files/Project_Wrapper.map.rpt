@@ -1,0 +1,940 @@
+Analysis & Synthesis report for Project_Wrapper
+Thu May 17 16:40:15 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div0
+ 13. Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div1
+ 14. Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div2
+ 15. Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div3
+ 16. Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div4
+ 17. Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div5
+ 18. Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_5"
+ 19. Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_4"
+ 20. Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_3"
+ 21. Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_2"
+ 22. Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_1"
+ 23. Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_0"
+ 24. Port Connectivity Checks: "PWM_TOP:PWM_TOP_i"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu May 17 16:40:15 2018       ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                   ; Project_Wrapper                             ;
+; Top-level Entity Name           ; Project_Wrapper                             ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 334                                         ;
+; Total pins                      ; 9                                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 18                                          ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEBA6U23I7       ;                    ;
+; Top-level entity name                                                           ; Project_Wrapper    ; Project_Wrapper    ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; ../../PWM/PWM_TOP.vhd            ; yes             ; User VHDL File               ; C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM_TOP.vhd                      ;         ;
+; ../../PWM/PWM.vhd                ; yes             ; User VHDL File               ; C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM.vhd                          ;         ;
+; ../../Project_Wrapper.vhd        ; yes             ; User VHDL File               ; C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/Project_Wrapper.vhd                  ;         ;
+; ../../ik_pack.vhd                ; yes             ; User VHDL File               ; C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_pack.vhd                          ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_divide.tdf                               ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/abs_divider.inc                              ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/sign_div_unsign.inc                          ;         ;
+; aglobal180.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc                               ;         ;
+; db/lpm_divide_2ro.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/FINAL/Quartus/db/lpm_divide_2ro.tdf  ;         ;
+; db/abs_divider_bdg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/FINAL/Quartus/db/abs_divider_bdg.tdf ;         ;
+; db/alt_u_div_63f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/FINAL/Quartus/db/alt_u_div_63f.tdf   ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/FINAL/Quartus/db/lpm_abs_4p9.tdf     ;         ;
+; db/lpm_abs_bp9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/FINAL/Quartus/db/lpm_abs_bp9.tdf     ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 349       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 649       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 48        ;
+;     -- 5 input functions                    ; 6         ;
+;     -- 4 input functions                    ; 1         ;
+;     -- <=3 input functions                  ; 594       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 334       ;
+;                                             ;           ;
+; I/O pins                                    ; 9         ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 18        ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 334       ;
+; Total fan-out                               ; 3156      ;
+; Average fan-out                             ; 3.10      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-----------------+--------------+
+; |Project_Wrapper           ; 649 (0)             ; 334 (0)                   ; 0                 ; 18         ; 9    ; 0            ; |Project_Wrapper                             ; Project_Wrapper ; work         ;
+;    |PWM_TOP:PWM_TOP_i|     ; 649 (264)           ; 334 (0)                   ; 0                 ; 18         ; 0    ; 0            ; |Project_Wrapper|PWM_TOP:PWM_TOP_i           ; PWM_TOP         ; work         ;
+;       |PWM:PWM_0|          ; 104 (104)           ; 84 (84)                   ; 0                 ; 0          ; 0    ; 0            ; |Project_Wrapper|PWM_TOP:PWM_TOP_i|PWM:PWM_0 ; PWM             ; work         ;
+;       |PWM:PWM_1|          ; 56 (56)             ; 50 (50)                   ; 0                 ; 0          ; 0    ; 0            ; |Project_Wrapper|PWM_TOP:PWM_TOP_i|PWM:PWM_1 ; PWM             ; work         ;
+;       |PWM:PWM_2|          ; 56 (56)             ; 50 (50)                   ; 0                 ; 0          ; 0    ; 0            ; |Project_Wrapper|PWM_TOP:PWM_TOP_i|PWM:PWM_2 ; PWM             ; work         ;
+;       |PWM:PWM_3|          ; 56 (56)             ; 50 (50)                   ; 0                 ; 0          ; 0    ; 0            ; |Project_Wrapper|PWM_TOP:PWM_TOP_i|PWM:PWM_3 ; PWM             ; work         ;
+;       |PWM:PWM_4|          ; 56 (56)             ; 50 (50)                   ; 0                 ; 0          ; 0    ; 0            ; |Project_Wrapper|PWM_TOP:PWM_TOP_i|PWM:PWM_4 ; PWM             ; work         ;
+;       |PWM:PWM_5|          ; 57 (57)             ; 50 (50)                   ; 0                 ; 0          ; 0    ; 0            ; |Project_Wrapper|PWM_TOP:PWM_TOP_i|PWM:PWM_5 ; PWM             ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary    ;
++-----------------------------------+-------------+
+; Statistic                         ; Number Used ;
++-----------------------------------+-------------+
+; Two Independent 18x18             ; 12          ;
+; Sum of two 18x18                  ; 6           ;
+; Total number of DSP blocks        ; 18          ;
+;                                   ;             ;
+; Fixed Point Signed Multiplier     ; 6           ;
+; Fixed Point Unsigned Multiplier   ; 6           ;
+; Fixed Point Mixed Sign Multiplier ; 12          ;
++-----------------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                          ;
++--------------------------------------------------+----------------------------------------------------------+
+; Register name                                    ; Reason for Removal                                       ;
++--------------------------------------------------+----------------------------------------------------------+
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|pulse_length[17..31] ; Stuck at GND due to stuck port data_in                   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|pulse_length[17..31] ; Stuck at GND due to stuck port data_in                   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|pulse_length[17..31] ; Stuck at GND due to stuck port data_in                   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|pulse_length[17..31] ; Stuck at GND due to stuck port data_in                   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|pulse_length[17..31] ; Stuck at GND due to stuck port data_in                   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[17..31] ; Stuck at GND due to stuck port data_in                   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[31]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[31]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[31]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[31]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[31]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[31]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[31]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[31]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[31]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[31]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[30]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[30]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[30]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[30]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[30]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[30]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[30]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[30]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[30]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[30]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[29]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[29]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[29]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[29]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[29]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[29]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[29]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[29]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[29]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[29]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[28]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[28]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[28]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[28]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[28]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[28]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[28]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[28]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[28]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[28]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[27]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[27]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[27]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[27]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[27]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[27]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[27]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[27]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[27]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[27]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[26]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[26]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[26]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[26]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[26]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[26]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[26]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[26]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[26]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[26]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[25]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[25]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[25]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[25]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[25]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[25]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[25]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[25]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[25]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[25]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[24]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[24]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[24]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[24]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[24]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[24]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[24]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[24]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[24]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[24]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[23]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[23]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[23]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[23]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[23]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[23]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[23]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[23]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[23]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[23]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[22]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[22]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[22]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[22]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[22]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[22]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[22]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[22]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[22]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[22]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[21]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[21]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[21]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[21]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[21]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[21]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[21]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[21]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[21]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[21]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[20]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[20]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[20]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[20]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[20]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[20]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[20]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[20]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[20]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[20]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[19]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[19]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[19]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[19]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[19]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[19]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[19]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[19]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[19]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[19]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[18]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[18]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[18]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[18]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[18]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[18]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[18]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[18]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[18]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[18]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[17]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[17]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[17]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[17]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[17]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[17]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[17]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[17]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[17]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[17]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[16]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[16]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[16]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[16]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[16]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[16]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[16]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[16]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[16]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[16]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[15]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[15]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[15]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[15]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[15]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[15]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[15]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[15]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[15]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[15]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[14]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[14]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[14]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[14]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[14]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[14]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[14]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[14]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[14]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[14]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[13]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[13]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[13]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[13]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[13]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[13]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[13]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[13]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[13]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[13]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[12]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[12]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[12]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[12]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[12]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[12]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[12]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[12]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[12]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[12]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[11]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[11]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[11]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[11]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[11]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[11]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[11]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[11]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[11]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[11]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[10]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[10]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[10]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[10]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[10]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[10]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[10]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[10]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[10]      ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[10]  ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[9]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[9]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[9]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[9]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[9]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[9]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[9]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[9]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[9]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[9]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[8]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[8]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[8]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[8]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[8]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[8]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[8]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[8]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[8]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[8]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[7]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[7]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[7]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[7]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[7]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[7]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[7]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[7]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[7]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[7]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[6]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[6]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[6]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[6]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[6]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[6]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[6]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[6]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[6]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[6]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[5]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[5]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[5]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[5]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[5]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[5]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[5]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[5]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[5]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[5]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[4]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[4]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[4]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[4]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[4]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[4]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[4]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[4]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[4]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[4]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[3]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[3]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[3]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[3]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[3]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[3]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[3]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[3]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[3]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[3]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[2]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[2]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[2]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[2]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[2]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[2]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[2]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[2]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[2]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[2]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[1]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[1]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[1]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[1]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[1]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[1]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[1]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[1]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[1]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[1]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|count_width[0]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[0]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|count_width[0]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[0]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|count_width[0]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[0]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|count_width[0]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[0]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|count_width[0]       ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[0]   ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|current_s            ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|current_s        ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|current_s            ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|current_s        ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|current_s            ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|current_s        ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|current_s            ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|current_s        ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|current_s            ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|current_s        ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|pulse_length[16]     ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[16] ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|pulse_length[16]     ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[16] ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|pulse_length[16]     ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[16] ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|pulse_length[16]     ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[16] ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|pulse_length[16]     ; Merged with PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[16] ;
+; Total Number of Removed Registers = 260          ;                                                          ;
++--------------------------------------------------+----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 334   ;
+; Number of registers using Synchronous Clear  ; 115   ;
+; Number of registers using Synchronous Load   ; 102   ;
+; Number of registers using Asynchronous Clear ; 334   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 230   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------+
+; Inverted Register Statistics                           ;
++----------------------------------------------+---------+
+; Inverted Register                            ; Fan out ;
++----------------------------------------------+---------+
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[9]   ; 2       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[6]   ; 2       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[19]  ; 2       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[18]  ; 2       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[17]  ; 2       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[16]  ; 2       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|count_width[14]  ; 2       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[10] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[7]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[6]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[4]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[3]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[5]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[16] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_0|pulse_length[13] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|pulse_length[7]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|pulse_length[5]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|pulse_length[10] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|pulse_length[13] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|pulse_length[3]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|pulse_length[4]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_1|pulse_length[6]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|pulse_length[7]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|pulse_length[3]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|pulse_length[4]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|pulse_length[5]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|pulse_length[6]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|pulse_length[10] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_2|pulse_length[13] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|pulse_length[7]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|pulse_length[10] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|pulse_length[13] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|pulse_length[5]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|pulse_length[3]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|pulse_length[4]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_3|pulse_length[6]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|pulse_length[6]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|pulse_length[5]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|pulse_length[4]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|pulse_length[3]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|pulse_length[13] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|pulse_length[7]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_4|pulse_length[10] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|pulse_length[4]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|pulse_length[3]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|pulse_length[13] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|pulse_length[10] ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|pulse_length[7]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|pulse_length[6]  ; 1       ;
+; PWM_TOP:PWM_TOP_i|PWM:PWM_5|pulse_length[5]  ; 1       ;
+; Total number of inverted registers = 50      ;         ;
++----------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 48             ; Untyped                                  ;
+; LPM_WIDTHD             ; 32             ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_2ro ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 48             ; Untyped                                  ;
+; LPM_WIDTHD             ; 32             ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_2ro ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div2 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 48             ; Untyped                                  ;
+; LPM_WIDTHD             ; 32             ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_2ro ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div3 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 48             ; Untyped                                  ;
+; LPM_WIDTHD             ; 32             ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_2ro ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div4 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 48             ; Untyped                                  ;
+; LPM_WIDTHD             ; 32             ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_2ro ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: PWM_TOP:PWM_TOP_i|lpm_divide:Div5 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 48             ; Untyped                                  ;
+; LPM_WIDTHD             ; 32             ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_2ro ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_5" ;
++----------------+-------+----------+---------------------+
+; Port           ; Type  ; Severity ; Details             ;
++----------------+-------+----------+---------------------+
+; length[31..16] ; Input ; Info     ; Stuck at GND        ;
++----------------+-------+----------+---------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_4" ;
++----------------+-------+----------+---------------------+
+; Port           ; Type  ; Severity ; Details             ;
++----------------+-------+----------+---------------------+
+; length[31..16] ; Input ; Info     ; Stuck at GND        ;
++----------------+-------+----------+---------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_3" ;
++----------------+-------+----------+---------------------+
+; Port           ; Type  ; Severity ; Details             ;
++----------------+-------+----------+---------------------+
+; length[31..16] ; Input ; Info     ; Stuck at GND        ;
++----------------+-------+----------+---------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_2" ;
++----------------+-------+----------+---------------------+
+; Port           ; Type  ; Severity ; Details             ;
++----------------+-------+----------+---------------------+
+; length[31..16] ; Input ; Info     ; Stuck at GND        ;
++----------------+-------+----------+---------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_1" ;
++----------------+-------+----------+---------------------+
+; Port           ; Type  ; Severity ; Details             ;
++----------------+-------+----------+---------------------+
+; length[31..16] ; Input ; Info     ; Stuck at GND        ;
++----------------+-------+----------+---------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "PWM_TOP:PWM_TOP_i|PWM:PWM_0" ;
++----------------+-------+----------+---------------------+
+; Port           ; Type  ; Severity ; Details             ;
++----------------+-------+----------+---------------------+
+; length[31..16] ; Input ; Info     ; Stuck at GND        ;
++----------------+-------+----------+---------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "PWM_TOP:PWM_TOP_i" ;
++------------+-------+----------+---------------+
+; Port       ; Type  ; Severity ; Details       ;
++------------+-------+----------+---------------+
+; a0[16..15] ; Input ; Info     ; Stuck at VCC  ;
+; a0[4..0]   ; Input ; Info     ; Stuck at VCC  ;
+; a0[31..17] ; Input ; Info     ; Stuck at GND  ;
+; a0[14..13] ; Input ; Info     ; Stuck at GND  ;
+; a0[11..10] ; Input ; Info     ; Stuck at GND  ;
+; a0[8..5]   ; Input ; Info     ; Stuck at GND  ;
+; a0[12]     ; Input ; Info     ; Stuck at VCC  ;
+; a0[9]      ; Input ; Info     ; Stuck at VCC  ;
+; a1[16..15] ; Input ; Info     ; Stuck at VCC  ;
+; a1[4..0]   ; Input ; Info     ; Stuck at VCC  ;
+; a1[31..17] ; Input ; Info     ; Stuck at GND  ;
+; a1[14..13] ; Input ; Info     ; Stuck at GND  ;
+; a1[11..10] ; Input ; Info     ; Stuck at GND  ;
+; a1[8..5]   ; Input ; Info     ; Stuck at GND  ;
+; a1[12]     ; Input ; Info     ; Stuck at VCC  ;
+; a1[9]      ; Input ; Info     ; Stuck at VCC  ;
+; a2[16..15] ; Input ; Info     ; Stuck at VCC  ;
+; a2[4..0]   ; Input ; Info     ; Stuck at VCC  ;
+; a2[31..17] ; Input ; Info     ; Stuck at GND  ;
+; a2[14..13] ; Input ; Info     ; Stuck at GND  ;
+; a2[11..10] ; Input ; Info     ; Stuck at GND  ;
+; a2[8..5]   ; Input ; Info     ; Stuck at GND  ;
+; a2[12]     ; Input ; Info     ; Stuck at VCC  ;
+; a2[9]      ; Input ; Info     ; Stuck at VCC  ;
+; a3[16..15] ; Input ; Info     ; Stuck at VCC  ;
+; a3[4..0]   ; Input ; Info     ; Stuck at VCC  ;
+; a3[31..17] ; Input ; Info     ; Stuck at GND  ;
+; a3[14..13] ; Input ; Info     ; Stuck at GND  ;
+; a3[11..10] ; Input ; Info     ; Stuck at GND  ;
+; a3[8..5]   ; Input ; Info     ; Stuck at GND  ;
+; a3[12]     ; Input ; Info     ; Stuck at VCC  ;
+; a3[9]      ; Input ; Info     ; Stuck at VCC  ;
+; a4[16..15] ; Input ; Info     ; Stuck at VCC  ;
+; a4[4..0]   ; Input ; Info     ; Stuck at VCC  ;
+; a4[31..17] ; Input ; Info     ; Stuck at GND  ;
+; a4[14..13] ; Input ; Info     ; Stuck at GND  ;
+; a4[11..10] ; Input ; Info     ; Stuck at GND  ;
+; a4[8..5]   ; Input ; Info     ; Stuck at GND  ;
+; a4[12]     ; Input ; Info     ; Stuck at VCC  ;
+; a4[9]      ; Input ; Info     ; Stuck at VCC  ;
+; a5[16..15] ; Input ; Info     ; Stuck at VCC  ;
+; a5[4..0]   ; Input ; Info     ; Stuck at VCC  ;
+; a5[31..17] ; Input ; Info     ; Stuck at GND  ;
+; a5[14..13] ; Input ; Info     ; Stuck at GND  ;
+; a5[11..10] ; Input ; Info     ; Stuck at GND  ;
+; a5[8..5]   ; Input ; Info     ; Stuck at GND  ;
+; a5[12]     ; Input ; Info     ; Stuck at VCC  ;
+; a5[9]      ; Input ; Info     ; Stuck at VCC  ;
++------------+-------+----------+---------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 334                         ;
+;     CLR               ; 104                         ;
+;     ENA CLR           ; 13                          ;
+;     ENA CLR SCLR      ; 115                         ;
+;     ENA CLR SLD       ; 102                         ;
+; arriav_lcell_comb     ; 649                         ;
+;     arith             ; 488                         ;
+;         1 data inputs ; 302                         ;
+;         2 data inputs ; 186                         ;
+;     normal            ; 161                         ;
+;         1 data inputs ; 92                          ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 48                          ;
+; arriav_mac            ; 18                          ;
+; boundary_port         ; 9                           ;
+;                       ;                             ;
+; Max LUT depth         ; 5.80                        ;
+; Average LUT depth     ; 3.81                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Thu May 17 16:39:30 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Project_Wrapper -c Project_Wrapper
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning (10335): Unrecognized synthesis attribute "register_balancing" at ../../../extras/pipelining.vhdl(314) File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 314
+Warning (10335): Unrecognized synthesis attribute "register_balancing" at ../../../extras/pipelining.vhdl(356) File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 356
+Warning (10335): Unrecognized synthesis attribute "register_balancing" at ../../../extras/pipelining.vhdl(400) File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 400
+Warning (10335): Unrecognized synthesis attribute "register_balancing" at ../../../extras/pipelining.vhdl(445) File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 445
+Warning (10335): Unrecognized synthesis attribute "register_balancing" at ../../../extras/pipelining.vhdl(490) File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 490
+Info (12021): Found 25 design units, including 12 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/extras/pipelining.vhdl
+    Info (12022): Found design unit 1: pipelining File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 72
+    Info (12022): Found design unit 2: pipeline_ul-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 311
+    Info (12022): Found design unit 3: pipeline_sulv-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 353
+    Info (12022): Found design unit 4: pipeline_slv-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 397
+    Info (12022): Found design unit 5: pipeline_u-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 442
+    Info (12022): Found design unit 6: pipeline_s-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 487
+    Info (12022): Found design unit 7: fixed_delay_line-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 537
+    Info (12022): Found design unit 8: fixed_delay_line_sulv-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 582
+    Info (12022): Found design unit 9: fixed_delay_line_signed-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 631
+    Info (12022): Found design unit 10: fixed_delay_line_unsigned-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 680
+    Info (12022): Found design unit 11: dynamic_delay_line_sulv-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 728
+    Info (12022): Found design unit 12: dynamic_delay_line_signed-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 770
+    Info (12022): Found design unit 13: dynamic_delay_line_unsigned-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 812
+    Info (12023): Found entity 1: pipeline_ul File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 297
+    Info (12023): Found entity 2: pipeline_sulv File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 339
+    Info (12023): Found entity 3: pipeline_slv File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 383
+    Info (12023): Found entity 4: pipeline_u File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 428
+    Info (12023): Found entity 5: pipeline_s File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 473
+    Info (12023): Found entity 6: fixed_delay_line File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 519
+    Info (12023): Found entity 7: fixed_delay_line_sulv File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 564
+    Info (12023): Found entity 8: fixed_delay_line_signed File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 613
+    Info (12023): Found entity 9: fixed_delay_line_unsigned File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 662
+    Info (12023): Found entity 10: dynamic_delay_line_sulv File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 712
+    Info (12023): Found entity 11: dynamic_delay_line_signed File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 754
+    Info (12023): Found entity 12: dynamic_delay_line_unsigned File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/pipelining.vhdl Line: 796
+Info (12021): Found 12 design units, including 5 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/extras/cordic.vhdl
+    Info (12022): Found design unit 1: cordic File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 126
+    Info (12022): Found design unit 2: cordic-body File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 316
+    Info (12022): Found design unit 3: cordic_pipelined-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 483
+    Info (12022): Found design unit 4: cordic_flex_pipelined-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 572
+    Info (12022): Found design unit 5: cordic_sequential-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 655
+    Info (12022): Found design unit 6: sincos_sequential-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 773
+    Info (12022): Found design unit 7: sincos_pipelined-rtl File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 863
+    Info (12023): Found entity 1: cordic_pipelined File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 461
+    Info (12023): Found entity 2: cordic_flex_pipelined File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 549
+    Info (12023): Found entity 3: cordic_sequential File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 630
+    Info (12023): Found entity 4: sincos_sequential File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 750
+    Info (12023): Found entity 5: sincos_pipelined File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/extras/cordic.vhdl Line: 841
+Info (12021): Found 2 design units, including 1 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/fk/fk_comb.vhd
+    Info (12022): Found design unit 1: fk_comb-behavioral File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/FK/fk_comb.vhd Line: 27
+    Info (12023): Found entity 1: fk_comb File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/FK/fk_comb.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/ik/pwm/pwm_top.vhd
+    Info (12022): Found design unit 1: PWM_TOP-behavioral File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM_TOP.vhd Line: 21
+    Info (12023): Found entity 1: PWM_TOP File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM_TOP.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/ik/pwm/pwm.vhd
+    Info (12022): Found design unit 1: PWM-behavioral File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM.vhd Line: 15
+    Info (12023): Found entity 1: PWM File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/ik/cross_product/cross_product.vhd
+    Info (12022): Found design unit 1: cross_product-behavioral File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/cross_product/cross_product.vhd Line: 13
+    Info (12023): Found entity 1: cross_product File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/cross_product/cross_product.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/ik/jacobian/jacobian_t.vhd
+    Info (12022): Found design unit 1: jacobian_t-dataflow File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/jacobian/jacobian_t.vhd Line: 15
+    Info (12023): Found entity 1: jacobian_t File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/jacobian/jacobian_t.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/ik/matrix_multiply/mat_3x1.vhd
+    Info (12022): Found design unit 1: mat_3x1-behavioral File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/matrix_multiply/mat_3x1.vhd Line: 14
+    Info (12023): Found entity 1: mat_3x1 File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/matrix_multiply/mat_3x1.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/ik/project_wrapper.vhd
+    Info (12022): Found design unit 1: Project_Wrapper-behavioral File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/Project_Wrapper.vhd Line: 15
+    Info (12023): Found entity 1: Project_Wrapper File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/Project_Wrapper.vhd Line: 6
+Info (12021): Found 2 design units, including 0 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/ik/ik_pack.vhd
+    Info (12022): Found design unit 1: ik_pack File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_pack.vhd Line: 5
+    Info (12022): Found design unit 2: ik_pack-body File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_pack.vhd Line: 171
+Info (12021): Found 2 design units, including 1 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/ik/ik_machine.vhd
+    Info (12022): Found design unit 1: ik_machine-behavioral File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_machine.vhd Line: 22
+    Info (12023): Found entity 1: ik_machine File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_machine.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /users/graehme/documents/college/eecs/392/ik_project/vhdl/ik/counter.vhd
+    Info (12022): Found design unit 1: counter-behavioral File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/counter.vhd Line: 14
+    Info (12023): Found entity 1: counter File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/counter.vhd Line: 5
+Info (12127): Elaborating entity "Project_Wrapper" for the top level hierarchy
+Info (12128): Elaborating entity "PWM_TOP" for hierarchy "PWM_TOP:PWM_TOP_i" File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/Project_Wrapper.vhd Line: 17
+Info (12128): Elaborating entity "PWM" for hierarchy "PWM_TOP:PWM_TOP_i|PWM:PWM_0" File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM_TOP.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at PWM.vhd(50): signal "pulse_length" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM.vhd Line: 50
+Warning (10492): VHDL Process Statement warning at PWM.vhd(54): signal "length" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM.vhd Line: 54
+Warning (10492): VHDL Process Statement warning at PWM.vhd(60): signal "hold" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM.vhd Line: 60
+Warning (10492): VHDL Process Statement warning at PWM.vhd(74): signal "pulse_length" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM.vhd Line: 74
+Warning (10492): VHDL Process Statement warning at PWM.vhd(83): signal "hold" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/PWM/PWM.vhd Line: 83
+Info (278001): Inferred 6 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PWM_TOP:PWM_TOP_i|Div0" File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_pack.vhd Line: 340
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PWM_TOP:PWM_TOP_i|Div1" File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_pack.vhd Line: 340
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PWM_TOP:PWM_TOP_i|Div2" File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_pack.vhd Line: 340
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PWM_TOP:PWM_TOP_i|Div3" File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_pack.vhd Line: 340
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PWM_TOP:PWM_TOP_i|Div4" File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_pack.vhd Line: 340
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "PWM_TOP:PWM_TOP_i|Div5" File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_pack.vhd Line: 340
+Info (12130): Elaborated megafunction instantiation "PWM_TOP:PWM_TOP_i|lpm_divide:Div0" File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_pack.vhd Line: 340
+Info (12133): Instantiated megafunction "PWM_TOP:PWM_TOP_i|lpm_divide:Div0" with the following parameter: File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/ik_pack.vhd Line: 340
+    Info (12134): Parameter "LPM_WIDTHN" = "48"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2ro.tdf
+    Info (12023): Found entity 1: lpm_divide_2ro File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/FINAL/Quartus/db/lpm_divide_2ro.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_bdg.tdf
+    Info (12023): Found entity 1: abs_divider_bdg File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/FINAL/Quartus/db/abs_divider_bdg.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_63f.tdf
+    Info (12023): Found entity 1: alt_u_div_63f File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/FINAL/Quartus/db/alt_u_div_63f.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
+    Info (12023): Found entity 1: lpm_abs_4p9 File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/FINAL/Quartus/db/lpm_abs_4p9.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_bp9.tdf
+    Info (12023): Found entity 1: lpm_abs_bp9 File: C:/Users/Graehme/Documents/College/EECS/392/IK_Project/vhdl/IK/FINAL/Quartus/db/lpm_abs_bp9.tdf Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 678 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 651 logic cells
+    Info (21062): Implemented 18 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 900 megabytes
+    Info: Processing ended: Thu May 17 16:40:15 2018
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:00:57
+
+

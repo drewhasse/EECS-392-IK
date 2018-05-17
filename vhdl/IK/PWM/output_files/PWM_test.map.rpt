@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PWM_test
-Tue May 15 16:33:25 2018
+Thu May 17 15:33:01 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -44,13 +44,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 15 16:33:25 2018       ;
+; Analysis & Synthesis Status     ; Successful - Thu May 17 15:33:01 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; PWM_test                                    ;
 ; Top-level Entity Name           ; PWM_test                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 88                                          ;
+; Total registers                 ; 91                                          ;
 ; Total pins                      ; 6                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -182,25 +182,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 68        ;
+; Estimate of Logic utilization (ALMs needed) ; 77        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 121       ;
+; Combinational ALUT usage for logic          ; 132       ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 13        ;
+;     -- 6 input functions                    ; 20        ;
 ;     -- 5 input functions                    ; 1         ;
 ;     -- 4 input functions                    ; 0         ;
-;     -- <=3 input functions                  ; 107       ;
+;     -- <=3 input functions                  ; 111       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 88        ;
+; Dedicated logic registers                   ; 91        ;
 ;                                             ;           ;
 ; I/O pins                                    ; 6         ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 88        ;
-; Total fan-out                               ; 732       ;
-; Average fan-out                             ; 3.31      ;
+; Maximum fan-out                             ; 91        ;
+; Total fan-out                               ; 794       ;
+; Average fan-out                             ; 3.38      ;
 +---------------------------------------------+-----------+
 
 
@@ -209,22 +209,22 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |PWM_test                  ; 121 (121)           ; 88 (88)                   ; 0                 ; 0          ; 6    ; 0            ; |PWM_test           ; PWM_test    ; work         ;
+; |PWM_test                  ; 132 (132)           ; 91 (91)                   ; 0                 ; 0          ; 6    ; 0            ; |PWM_test           ; PWM_test    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; pulse_length[0..2,4,5,7..9]            ; Merged with pulse_length[10]           ;
-; pulse_length[3]                        ; Merged with pulse_length[6]            ;
-; pulse_length[10]                       ; Stuck at GND due to stuck port data_in ;
-; pulse_length[6]                        ; Stuck at VCC due to stuck port data_in ;
-; Total Number of Removed Registers = 11 ;                                        ;
-+----------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; pulse_length[0..2,4,5]                ; Merged with pulse_length[7]            ;
+; pulse_length[3]                       ; Merged with pulse_length[6]            ;
+; pulse_length[7]                       ; Stuck at GND due to stuck port data_in ;
+; pulse_length[6]                       ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 8 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -232,12 +232,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 88    ;
-; Number of registers using Synchronous Clear  ; 34    ;
-; Number of registers using Synchronous Load   ; 21    ;
-; Number of registers using Asynchronous Clear ; 88    ;
+; Total registers                              ; 91    ;
+; Number of registers using Synchronous Clear  ; 25    ;
+; Number of registers using Synchronous Load   ; 24    ;
+; Number of registers using Asynchronous Clear ; 91    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 86    ;
+; Number of registers using Clock Enable       ; 89    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -255,10 +255,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; count_width[9]                          ; 2       ;
 ; count_width[6]                          ; 2       ;
 ; pulse_length[11]                        ; 2       ;
+; pulse_length[16]                        ; 2       ;
 ; pulse_length[13]                        ; 2       ;
 ; pulse_length[14]                        ; 2       ;
 ; pulse_length[15]                        ; 2       ;
-; pulse_length[16]                        ; 2       ;
 ; Total number of inverted registers = 12 ;         ;
 +-----------------------------------------+---------+
 
@@ -268,25 +268,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 88                          ;
+; arriav_ff             ; 91                          ;
 ;     CLR               ; 2                           ;
-;     ENA CLR           ; 31                          ;
-;     ENA CLR SCLR      ; 34                          ;
-;     ENA CLR SLD       ; 21                          ;
-; arriav_lcell_comb     ; 121                         ;
-;     arith             ; 85                          ;
+;     ENA CLR           ; 40                          ;
+;     ENA CLR SCLR      ; 25                          ;
+;     ENA CLR SLD       ; 24                          ;
+; arriav_lcell_comb     ; 132                         ;
+;     arith             ; 88                          ;
 ;         1 data inputs ; 65                          ;
-;         2 data inputs ; 20                          ;
-;     normal            ; 36                          ;
+;         2 data inputs ; 23                          ;
+;     normal            ; 44                          ;
 ;         1 data inputs ; 17                          ;
-;         2 data inputs ; 3                           ;
+;         2 data inputs ; 4                           ;
 ;         3 data inputs ; 2                           ;
 ;         5 data inputs ; 1                           ;
-;         6 data inputs ; 13                          ;
+;         6 data inputs ; 20                          ;
 ; boundary_port         ; 6                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.97                        ;
+; Average LUT depth     ; 3.02                        ;
 +-----------------------+-----------------------------+
 
 
@@ -305,7 +305,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue May 15 16:33:02 2018
+    Info: Processing started: Thu May 17 15:32:26 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PWM_SERVO -c PWM_test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -325,14 +325,14 @@ Warning (10492): VHDL Process Statement warning at PWM_test.vhd(88): signal "hol
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 128 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 139 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 122 logic cells
+    Info (21061): Implemented 133 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 783 megabytes
-    Info: Processing ended: Tue May 15 16:33:25 2018
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:51
+    Info: Peak virtual memory: 792 megabytes
+    Info: Processing ended: Thu May 17 15:33:01 2018
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:00:48
 
 

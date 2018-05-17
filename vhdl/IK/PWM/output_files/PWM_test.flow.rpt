@@ -1,5 +1,5 @@
 Flow report for PWM_test
-Tue May 15 16:35:13 2018
+Thu May 17 15:34:57 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue May 15 16:34:55 2018       ;
+; Flow Status                     ; Successful - Thu May 17 15:34:39 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; PWM_test                                    ;
 ; Top-level Entity Name           ; PWM_test                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEBA6U23I7                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 68 / 41,910 ( < 1 % )                       ;
-; Total registers                 ; 88                                          ;
+; Logic utilization (in ALMs)     ; 74 / 41,910 ( < 1 % )                       ;
+; Total registers                 ; 91                                          ;
 ; Total pins                      ; 6 / 314 ( 2 % )                             ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/15/2018 16:33:04 ;
+; Start date & time ; 05/17/2018 15:32:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PWM_test            ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 2546692793344.152641998310936          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 2546692793344.152658914814000          ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 100                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; -40                                    ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -93,11 +93,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 783 MB              ; 00:00:51                           ;
-; Fitter               ; 00:01:10     ; 1.0                     ; 2218 MB             ; 00:01:42                           ;
-; Assembler            ; 00:00:15     ; 1.0                     ; 748 MB              ; 00:00:14                           ;
-; Timing Analyzer      ; 00:00:16     ; 1.0                     ; 1068 MB             ; 00:00:14                           ;
-; Total                ; 00:02:04     ; --                      ; --                  ; 00:03:01                           ;
+; Analysis & Synthesis ; 00:00:34     ; 1.0                     ; 792 MB              ; 00:00:48                           ;
+; Fitter               ; 00:01:16     ; 1.0                     ; 2221 MB             ; 00:01:39                           ;
+; Assembler            ; 00:00:17     ; 1.0                     ; 755 MB              ; 00:00:13                           ;
+; Timing Analyzer      ; 00:00:17     ; 1.0                     ; 1064 MB             ; 00:00:12                           ;
+; Total                ; 00:02:24     ; --                      ; --                  ; 00:02:52                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

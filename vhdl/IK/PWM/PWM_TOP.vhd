@@ -14,7 +14,7 @@ entity PWM_TOP is
   a3 : in std_logic_vector(31 downto 0);
   a4 : in std_logic_vector(31 downto 0);
   a5 : in std_logic_vector(31 downto 0);
-  pulse : out std_logic_vector(5 downto 0);
+  pulse : out std_logic_vector(5 downto 0)
   );
 end entity;
 
