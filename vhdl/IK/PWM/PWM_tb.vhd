@@ -19,11 +19,10 @@ signal pulse_tb : std_logic;
       clk   => clk_tb,
       reset => reset_tb,
       hold  => hold_tb,
-      sig   => sig_tb,
+      length   => rads_to_pulse(std_logic_vector'("00000000000000011001001000011111")),
       pulse => pulse_tb
     );
 
-    sig_tb <= '1';
     clock_generate: process is
       begin
         clk_tb <= '0';
