@@ -43,6 +43,8 @@ architecture arch of UART_nByte is
   signal RX_DV_c : std_logic := '0';
   signal RX_byte : std_logic_vector(7 downto 0);
   signal test_RXB : std_logic_vector(7 downto 0) := x"00";
+  signal dout_prev : std_logic_vector(n*8-1 downto 0) := (others => '0');
+  signal dout_prev_c : std_logic_vector(n*8-1 downto 0) := (others => '0');
 
 begin
   clk_proc_nB : process(clk, reset) is
@@ -57,6 +59,7 @@ begin
         bytes <= bytes_c;
         valid <= valid_c;
         count <= count_c;
+        dout_prev <= dout_prev_c;
       end if;
     end process;
 
@@ -65,6 +68,11 @@ begin
       --Outputs--
       dout <= bytes;
       data_valid <= valid;
+      if (valid = '1') then
+        dout <= bytes;
+      else
+        dout <= dout_prev;
+      end if;
       ------------
       bytes_c <= bytes;
       valid_c <= valid;
@@ -103,6 +111,7 @@ begin
 
         when (done) =>
           valid_c <= '1';
+          dout_prev_c <= bytes;
           count_c <= n;
           next_state <= idle;
         end case;

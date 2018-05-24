@@ -3,10 +3,10 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use std.textio.all;
 
-entity UART_R_tb is
+entity UART_nByte_tb is
 end entity;
 
-architecture behavioral of UART_R_tb is
+architecture behavioral of UART_nByte_tb is
   constant NUM_BYTES : natural := 4;
   component UART_R
     generic (
@@ -85,6 +85,7 @@ begin
         end loop;
         wait for 20 ns;
       end loop;
+      wait for 100 us;
       hold <= '1';
       wait;
   end process;
