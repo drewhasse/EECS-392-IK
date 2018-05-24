@@ -72,4 +72,6 @@ set_location_assignment PIN_D11 -to pulse[2]
 set_location_assignment PIN_AH13 -to pulse[3]
 set_location_assignment PIN_AH14 -to pulse[4]
 set_location_assignment PIN_AH3 -to pulse[5]
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

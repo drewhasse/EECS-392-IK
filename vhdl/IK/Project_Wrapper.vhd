@@ -13,19 +13,44 @@ entity Project_Wrapper is
 end entity;
 
 architecture behavioral of Project_Wrapper is
+  signal pulse_int : std_logic;
+  signal a0, a1, a2 : std_logic_vector(31 downto 0);
 begin
+  counter_i : counter
+  port map (
+    clk   => clk,
+    reset => reset,
+    hold  => hold,
+    pulse => pulse_int
+  );
+
+
+  ik_machine_i : ik_machine
+  port map (
+    clk   => clk,
+    reset => reset,
+    pulse => pulse_int,
+    destx => std_logic_vector'("00000000100101100000000000000000"),
+    desty => std_logic_vector'("00000000100101100000000000000000"),
+    a0    => a0,
+    a1    => a1,
+    a2    => a2
+  );
+
+
   PWM_TOP_i : PWM_TOP
   port map (
     clk   => clk,
     reset => reset,
     hold  => hold,
-    a0    => std_logic_vector'("00000000000000011001001000011111"),
-    a1    => std_logic_vector'("00000000000000011001001000011111"),
-    a2    => std_logic_vector'("00000000000000011001001000011111"),
+    a0    => std_logic_vector(signed(a0)-signed'("00000000000000011001001000011111")),
+    a1    => a1,
+    a2    => a2,
     a3    => std_logic_vector'("00000000000000011001001000011111"),
     a4    => std_logic_vector'("00000000000000011001001000011111"),
     a5    => std_logic_vector'("00000000000000011001001000011111"),
     pulse => pulse
   );
+
 
 end architecture;
