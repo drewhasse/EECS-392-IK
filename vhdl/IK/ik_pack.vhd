@@ -328,14 +328,15 @@ end rads_to_brads;
 
 function rads_to_pulse (rads : std_logic_vector(31 downto 0))
                      return std_logic_vector is
-  variable pos, norm, scaled : unsigned(31 downto 0);
+  variable pos : signed(31 downto 0);
+  variable norm, scaled : unsigned(31 downto 0);
   variable max_min : unsigned(35 downto 0);
   variable tmp : std_logic_vector(31 downto 0);
 begin
-  pos := unsigned(signed(rads) + signed'("00000000000000011001001000011111"));
-  if(pos > unsigned'("00000000000000110010010000111111")) then
+  pos := (signed(rads) + signed'("00000000000000011001001000011111");
+  if(pos > signed'("00000000000000110010010000111111")) then
     pos := "00000000000000110010010000111111";
-  elsif(pos < unsigned'(X"00000000")) then
+  elsif(pos < signed'(X"00000000")) then
     pos := (others => '0');
   end if;
   report "Pos ="& integer'image(to_integer(pos));
