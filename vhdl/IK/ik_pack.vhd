@@ -335,16 +335,14 @@ function rads_to_pulse (rads : std_logic_vector(31 downto 0))
 begin
   pos := (signed(rads) + signed'("00000000000000011001001000011111");
   if(pos > signed'("00000000000000110010010000111111")) then
-    pos := "00000000000000110010010000111111";
+    pos := signed'("00000000000000110010010000111111");
   elsif(pos < signed'(X"00000000")) then
     pos := (others => '0');
   end if;
-  report "Pos ="& integer'image(to_integer(pos));
   norm := resize((resize(unsigned(pos),48) SLL 16) / unsigned'("00000000000000110010010000111111"),32);
   max_min := unsigned(MAX_PULSE) - unsigned(MIN_PULSE);
   scaled := resize(((unsigned(norm)*unsigned(max_min)) SRL 34),32);
   tmp := std_logic_vector((scaled + resize((unsigned(MIN_PULSE) SRL 18),32)));
-  report "Norm = " & integer'image(to_integer(norm)) & "; scaled = " & integer'image(to_integer(scaled)) & "; max_min = " & integer'image(to_integer(max_min)) & "; tmp =" & integer'image(to_integer(signed(tmp)));
   return tmp;
 end rads_to_pulse;
 
