@@ -51,6 +51,35 @@ package ik_pack is
   );
   end component jacobian_t;
 
+  component UART_nByte
+    generic (
+      n            : natural := 4;
+      CLKS_PER_BIT : natural := 434
+    );
+    port (
+      clk        : in  std_logic;
+      reset      : in  std_logic;
+      RX         : in  std_logic;
+      dout       : out std_logic_vector(n*8-1 downto 0);
+      data_valid : out std_logic
+    );
+  end component UART_nByte;
+
+  component UART_R
+    generic (
+      CLKS_PER_BIT : natural := 434
+    );
+    port (
+      clk     : in  std_logic;
+      reset   : in  std_logic;
+      RX      : in  std_logic;
+      RX_DV   : out std_logic;
+      RX_byte : out std_logic_vector(7 downto 0)
+    );
+  end component UART_R;
+
+
+
   component PWM_TOP is
     port (
     clk : in std_logic;
@@ -333,7 +362,7 @@ function rads_to_pulse (rads : std_logic_vector(31 downto 0))
   variable max_min : unsigned(35 downto 0);
   variable tmp : std_logic_vector(31 downto 0);
 begin
-  pos := (signed(rads) + signed'("00000000000000011001001000011111");
+  pos := signed(rads) + signed'("00000000000000011001001000011111");
   if(pos > signed'("00000000000000110010010000111111")) then
     pos := signed'("00000000000000110010010000111111");
   elsif(pos < signed'(X"00000000")) then

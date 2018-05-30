@@ -4,7 +4,7 @@ library ieee;
 
 entity n_byte_uart is
   generic (
-    constant n : natural := 6;
+    constant n : natural := 4;
     CLKS_PER_BIT : natural := 434 --57600, 434 = 115200
   );
   port (

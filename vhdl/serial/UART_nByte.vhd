@@ -81,7 +81,7 @@ begin
       case (curr_state) is
         when (idle) =>
           if (RX_DV = '1') then
-            bytes_c(7 downto 0) <= RX_byte;
+            bytes_c(n*8-1 downto n*8-8) <= RX_byte;
             count_c <= count - 1;
             valid_c <= '0';
             next_state <= shift;
@@ -93,7 +93,7 @@ begin
           if (count > 0) then
             next_state <= wait_for_byte;
             if (RX_DV = '1') then
-              bytes_c(7 downto 0) <= RX_byte;
+              bytes_c(n*8-1 downto n*8-8) <= RX_byte;
               count_c <= count - 1;
               next_state <= shift;
             end if;
@@ -105,7 +105,7 @@ begin
           if (count = 0) then
             next_state <= done;
           else
-            bytes_c <= std_logic_vector(unsigned(bytes) sll 8);
+            bytes_c <= std_logic_vector(unsigned(bytes) srl 8);
             next_state <= wait_for_byte;
           end if;
 

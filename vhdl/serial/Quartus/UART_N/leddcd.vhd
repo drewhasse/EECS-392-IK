@@ -12,7 +12,10 @@ end entity leddcd;
 architecture data_flow of leddcd is
 begin
 
-segments_out <= "0001000" when data_in = x"61" else
+segments_out <= "0001000" when data_in = x"AA" else
+					"1000000" when data_in = x"00" else
+					"1111000" when data_in = x"ab" else
+					"0000000" when data_in = x"ff" else
 		   	   "0000011" when data_in = x"62" else
 		   	   "1000110" when data_in = x"63" else
 		   	   "0100001" when data_in = x"64" else
