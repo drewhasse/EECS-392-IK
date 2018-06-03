@@ -20,7 +20,7 @@ entity ik_machine is
 end entity;
 
 architecture behavioral of ik_machine is
-  type state is (idle, computeFK, computeJac, computeDTheta, computeAOut, updateAngle, waitOnPulseLow);
+  type state is (idle, computeFK, computeJac, computeDTheta, computeAOut, updateAngle, waitOnPulseLow, waitforinput);
   signal current_s, next_s, previous_s, next_previous_s : state;
   signal a0_i, a0_i_c, a1_i, a1_i_c, a2_i, a2_i_c : std_logic_vector(31 downto 0);
   signal a0_o, a0_o_c, a1_o, a1_o_c, a2_o, a2_o_c : std_logic_vector(31 downto 0);
@@ -29,7 +29,7 @@ architecture behavioral of ik_machine is
   signal e_j, e_j_c, p1_j, p1_j_c, p2_j, p2_j_c : std_logic_vector(95 downto 0);
   signal jac, jac_c, jac_mul, jac_mul_c : std_logic_vector(287 downto 0);
   signal delta_e_s, delta_e_s_c, delta_theta, delta_theta_c : std_logic_vector(95 downto 0);
-  signal dest : std_logic_vector(95 downto 0);
+  signal dest, dest_c : std_logic_vector(95 downto 0);
 begin
   clocked_proc : process(clk, reset) is
     begin
@@ -55,6 +55,7 @@ begin
         a0_e <= "00000000000000011001001000011111";
         a1_e <= "00000000000000000000000000000000";
         a2_e <= "00000000000000000000000000000000";
+        dest <= (others => '0');
       elsif (rising_edge(clk)) then
         current_s <= next_s;
         previous_s <= next_previous_s;
@@ -77,7 +78,7 @@ begin
         a0_e <= a0_e_c;
         a1_e <= a1_e_c;
         a2_e <= a2_e_c;
-
+        dest <= dest_c;
       end if;
   end process;
 
@@ -115,6 +116,10 @@ begin
     a0 <= a0_e;
     a1 <= a1_e;
     a2 <= a2_e;
+
+    dest_c(95 downto 64) <= destx;
+    dest_c(63 downto 32) <= desty;
+    dest_c(31 downto 0) <= (others => '0');
 
     case(current_s) is
       when idle =>
@@ -175,20 +180,28 @@ begin
 
       when updateAngle =>
         next_previous_s <= updateAngle;
-        if (signed(signed(ei(95 downto 64)) - signed(destx)) < THRESH) then
-          if (signed(signed(ei(63 downto 32)) - signed(desty)) < THRESH) then
+        next_s <= waitOnPulseLow;
+        if (abs(signed(ei(95 downto 64)) - signed(destx)) < THRESH) then
+          if (abs(signed(ei(63 downto 32)) - signed(desty)) < THRESH) then
             a0_e_c <= a0_o;
             a1_e_c <= a1_o;
             a2_e_c <= a2_o;
+            next_s <= waitforinput;
           end if;
         end if;
-        next_s <= waitOnPulseLow;
 
       when waitOnPulseLow =>
         if (pulse = '0') then
           next_s <= idle;
         else
           next_s <= waitOnPulseLow;
+        end if;
+
+      when waitforinput =>
+        if (dest(95 downto 64) /= destx or dest(63 downto 32) /= desty) then
+          next_s <= idle;
+        else
+          next_s <= waitforinput;
         end if;
 
       when others =>
@@ -221,10 +234,6 @@ begin
     p2    => p2_j,
     j_out => jac_c
   );
-
-  dest(95 downto 64) <= destx;
-  dest(63 downto 32) <= desty;
-  dest(31 downto 0) <= (others => '0');
 
   mat_3x1_delta_theta : mat_3x1
   port map (

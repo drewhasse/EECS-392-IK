@@ -10,7 +10,7 @@ package ik_pack is
   constant MAX_PULSE : std_logic_vector(35 downto 0) := "011110100001001000000000000000000000";
   constant MIN_PULSE : std_logic_vector(35 downto 0) := "000110000110101000000000000000000000";
   constant ALPHA : std_logic_vector(31 downto 0) := "00000000000000000000000000000001";
-  constant THRESH : signed(31 downto 0) := "00000000000000000001000000000000";
+  constant THRESH : signed(31 downto 0) := "00000000000000010000000000000000";
   type vec_3 is array(0 to 2) of std_logic_vector(31 downto 0);
   type vec_4 is array(0 to 3) of std_logic_vector(31 downto 0);
   type mat_3 is array(0 to 2) of vec_3;
