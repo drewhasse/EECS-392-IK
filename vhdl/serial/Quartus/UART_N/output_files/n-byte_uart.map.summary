@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed May 30 01:00:20 2018
+Analysis & Synthesis Status : Successful - Wed May 30 01:14:34 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : n-byte_uart
 Top-level Entity Name : n_byte_uart
 Family : Cyclone IV E
-Total logic elements : 396
-    Total combinational functions : 338
-    Dedicated logic registers : 178
-Total registers : 178
-Total pins : 34
+Total logic elements : 867
+    Total combinational functions : 617
+    Dedicated logic registers : 370
+Total registers : 370
+Total pins : 118
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

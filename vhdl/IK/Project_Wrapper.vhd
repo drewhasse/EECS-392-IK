@@ -41,8 +41,8 @@ begin
   -- desty_s(15 downto 8) <= dout_s(55 downto 48);
   -- desty_s(23 downto 16) <= dout_s(47 downto 40);
   -- desty_s(31 downto 24) <= dout_s(39 downto 32);
-  dest_x_s <= dout_s(num_bytes*8-1 downto num_bytes*8-32);
-  dest_y_s <= dout_s(num_bytes*8-33 downto num_bytes*8-64);
+  destx_s <= dout_s(num_bytes*8-1 downto num_bytes*8-32);
+  desty_s <= dout_s(num_bytes*8-33 downto num_bytes*8-64);
   base_angle <= dout_s(num_bytes*8-65 downto num_bytes*8-96);
 --------------------------------------------------------
   UART_nByte_i : UART_nByte
@@ -85,7 +85,7 @@ begin
     reset => reset,
     hold  => hold,
     a0    => std_logic_vector(signed(base_angle)-signed'("00000000000000011001001000011111")),
-    a1    => a0_s,
+    a1    => std_logic_vector(signed(a0_s)-signed'("00000000000000011001001000011111")),
     a2    => a1_s,
     a3    => a2_s,
     a4    => std_logic_vector'("00000000000000011001001000011111"),

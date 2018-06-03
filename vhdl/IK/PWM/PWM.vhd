@@ -62,14 +62,14 @@ begin
           count_width_c <= std_logic_vector(unsigned(count_width) - unsigned(one));
           if (count_width = zero) then
             pulse_gate_c <= '1';
-            pulseint_c <= '1';
+            pulseint_c <= '0';
             count_width_c <= "00000000000011110100001001000000";
           end if;
 
           if (pulse_gate = '1') then
             if (count_pulse = zero) then
               pulse_gate_c <= '0';
-              pulseint_c <= '0';
+              pulseint_c <= '1';
               count_pulse_c <= pulse_length;
             else
               count_pulse_c <= std_logic_vector(unsigned(count_pulse) - unsigned(one));

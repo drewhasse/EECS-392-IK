@@ -124,6 +124,342 @@
 					"strict" : false
 				},
 				{
+					"name" : "dout[28]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[29]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[30]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[31]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[32]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[33]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[34]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[35]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[36]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[37]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[38]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[39]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[40]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[41]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[42]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[43]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[44]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[45]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[46]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[47]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[48]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[49]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[50]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[51]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[52]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[53]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[54]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[55]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[56]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[57]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[58]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[59]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[60]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[61]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[62]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[63]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[64]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[65]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[66]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[67]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[68]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[69]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[70]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[71]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[72]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[73]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[74]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[75]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[76]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[77]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[78]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[79]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[80]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[81]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[82]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[83]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[84]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[85]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[86]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[87]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[88]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[89]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[90]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[91]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[92]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[93]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[94]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[95]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[96]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[97]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[98]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[99]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[100]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[101]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[102]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[103]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[104]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[105]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[106]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[107]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[108]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[109]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[110]",
+					"strict" : false
+				},
+				{
+					"name" : "dout[111]",
+					"strict" : false
+				},
+				{
 					"name" : "RX",
 					"strict" : false
 				},

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for n-byte_uart
-Wed May 30 01:00:20 2018
+Wed May 30 01:14:34 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -50,16 +50,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 30 01:00:20 2018       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 30 01:14:34 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; n-byte_uart                                 ;
 ; Top-level Entity Name              ; n_byte_uart                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 396                                         ;
-;     Total combinational functions  ; 338                                         ;
-;     Dedicated logic registers      ; 178                                         ;
-; Total registers                    ; 178                                         ;
-; Total pins                         ; 34                                          ;
+; Total logic elements               ; 867                                         ;
+;     Total combinational functions  ; 617                                         ;
+;     Dedicated logic registers      ; 370                                         ;
+; Total registers                    ; 370                                         ;
+; Total pins                         ; 118                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -187,46 +187,58 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 396       ;
+; Estimated Total logic elements              ; 867       ;
 ;                                             ;           ;
-; Total combinational functions               ; 338       ;
+; Total combinational functions               ; 617       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 134       ;
-;     -- 3 input functions                    ; 56        ;
-;     -- <=2 input functions                  ; 148       ;
+;     -- 4 input functions                    ; 337       ;
+;     -- 3 input functions                    ; 98        ;
+;     -- <=2 input functions                  ; 182       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 248       ;
+;     -- normal mode                          ; 527       ;
 ;     -- arithmetic mode                      ; 90        ;
 ;                                             ;           ;
-; Total registers                             ; 178       ;
-;     -- Dedicated logic registers            ; 178       ;
+; Total registers                             ; 370       ;
+;     -- Dedicated logic registers            ; 370       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 34        ;
+; I/O pins                                    ; 118       ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 178       ;
-; Total fan-out                               ; 1750      ;
-; Average fan-out                             ; 3.00      ;
+; Maximum fan-out                             ; 370       ;
+; Total fan-out                               ; 3596      ;
+; Average fan-out                             ; 2.94      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+-------------+--------------+
-; |n_byte_uart                    ; 338 (0)             ; 178 (32)                  ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |n_byte_uart                                         ; n_byte_uart ; work         ;
-;    |UART_nByte:UART_nByte_i|    ; 246 (92)            ; 146 (68)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|UART_nByte:UART_nByte_i                 ; UART_nByte  ; work         ;
-;       |UART_R:UART_R_i|         ; 154 (154)           ; 78 (78)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|UART_nByte:UART_nByte_i|UART_R:UART_R_i ; UART_R      ; work         ;
-;    |leddcd:\LED_gen:0:leddcd_i| ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:0:leddcd_i              ; leddcd      ; work         ;
-;    |leddcd:\LED_gen:1:leddcd_i| ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:1:leddcd_i              ; leddcd      ; work         ;
-;    |leddcd:\LED_gen:2:leddcd_i| ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:2:leddcd_i              ; leddcd      ; work         ;
-;    |leddcd:\LED_gen:3:leddcd_i| ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:3:leddcd_i              ; leddcd      ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+-------------+--------------+
+; |n_byte_uart                     ; 617 (0)             ; 370 (128)                 ; 0           ; 0            ; 0       ; 0         ; 118  ; 0            ; |n_byte_uart                                         ; n_byte_uart ; work         ;
+;    |UART_nByte:UART_nByte_i|     ; 247 (93)            ; 242 (164)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|UART_nByte:UART_nByte_i                 ; UART_nByte  ; work         ;
+;       |UART_R:UART_R_i|          ; 154 (154)           ; 78 (78)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|UART_nByte:UART_nByte_i|UART_R:UART_R_i ; UART_R      ; work         ;
+;    |leddcd:\LED_gen:0:leddcd_i|  ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:0:leddcd_i              ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:10:leddcd_i| ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:10:leddcd_i             ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:11:leddcd_i| ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:11:leddcd_i             ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:12:leddcd_i| ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:12:leddcd_i             ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:13:leddcd_i| ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:13:leddcd_i             ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:14:leddcd_i| ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:14:leddcd_i             ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:15:leddcd_i| ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:15:leddcd_i             ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:1:leddcd_i|  ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:1:leddcd_i              ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:2:leddcd_i|  ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:2:leddcd_i              ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:3:leddcd_i|  ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:3:leddcd_i              ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:4:leddcd_i|  ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:4:leddcd_i              ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:5:leddcd_i|  ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:5:leddcd_i              ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:6:leddcd_i|  ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:6:leddcd_i              ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:7:leddcd_i|  ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:7:leddcd_i              ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:8:leddcd_i|  ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:8:leddcd_i              ; leddcd      ; work         ;
+;    |leddcd:\LED_gen:9:leddcd_i|  ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |n_byte_uart|leddcd:\LED_gen:9:leddcd_i              ; leddcd      ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -257,14 +269,14 @@ Encoding Type:  One-Hot
 +---------------------+---------------------+----------------+-----------------+------------------+-----------------+
 
 
-+---------------------------------------------------------------+
-; Registers Removed During Synthesis                            ;
-+------------------------------------------+--------------------+
-; Register name                            ; Reason for Removal ;
-+------------------------------------------+--------------------+
-; UART_nByte:UART_nByte_i|dout_prev[0..31] ; Lost fanout        ;
-; Total Number of Removed Registers = 32   ;                    ;
-+------------------------------------------+--------------------+
++----------------------------------------------------------------+
+; Registers Removed During Synthesis                             ;
++-------------------------------------------+--------------------+
+; Register name                             ; Reason for Removal ;
++-------------------------------------------+--------------------+
+; UART_nByte:UART_nByte_i|dout_prev[0..127] ; Lost fanout        ;
+; Total Number of Removed Registers = 128   ;                    ;
++-------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -272,12 +284,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 178   ;
+; Total registers                              ; 370   ;
 ; Number of registers using Synchronous Clear  ; 31    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 145   ;
+; Number of registers using Asynchronous Clear ; 241   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 157   ;
+; Number of registers using Clock Enable       ; 349   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -287,7 +299,7 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; UART_nByte:UART_nByte_i|count[2]       ; 3       ;
+; UART_nByte:UART_nByte_i|count[4]       ; 4       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -297,15 +309,27 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 5:1                ; 30 bits   ; 90 LEs        ; 30 LEs               ; 60 LEs                 ; Yes        ; |n_byte_uart|UART_nByte:UART_nByte_i|count[8]                      ;
-; 6:1                ; 28 bits   ; 112 LEs       ; 28 LEs               ; 84 LEs                 ; Yes        ; |n_byte_uart|UART_nByte:UART_nByte_i|UART_R:UART_R_i|index[3]      ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |n_byte_uart|UART_nByte:UART_nByte_i|bytes[31]                     ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |n_byte_uart|UART_nByte:UART_nByte_i|UART_R:UART_R_i|clk_count[22] ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |n_byte_uart|UART_nByte:UART_nByte_i|UART_R:UART_R_i|index[0]      ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:0:leddcd_i|segments_out[6]            ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:1:leddcd_i|segments_out[0]            ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:2:leddcd_i|segments_out[5]            ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:3:leddcd_i|segments_out[1]            ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 30 LEs               ; 60 LEs                 ; Yes        ; |n_byte_uart|UART_nByte:UART_nByte_i|count[14]                     ;
+; 6:1                ; 28 bits   ; 112 LEs       ; 28 LEs               ; 84 LEs                 ; Yes        ; |n_byte_uart|UART_nByte:UART_nByte_i|UART_R:UART_R_i|index[15]     ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |n_byte_uart|UART_nByte:UART_nByte_i|bytes[122]                    ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |n_byte_uart|UART_nByte:UART_nByte_i|UART_R:UART_R_i|clk_count[21] ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |n_byte_uart|UART_nByte:UART_nByte_i|UART_R:UART_R_i|index[2]      ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:0:leddcd_i|segments_out[0]            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:1:leddcd_i|segments_out[5]            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:2:leddcd_i|segments_out[0]            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:3:leddcd_i|segments_out[6]            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:4:leddcd_i|segments_out[0]            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:5:leddcd_i|segments_out[1]            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:6:leddcd_i|segments_out[6]            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:7:leddcd_i|segments_out[0]            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:8:leddcd_i|segments_out[2]            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:9:leddcd_i|segments_out[0]            ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:10:leddcd_i|segments_out[0]           ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:11:leddcd_i|segments_out[6]           ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:12:leddcd_i|segments_out[1]           ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:13:leddcd_i|segments_out[2]           ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:14:leddcd_i|segments_out[1]           ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |n_byte_uart|leddcd:\LED_gen:15:leddcd_i|segments_out[6]           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 
 
@@ -314,7 +338,7 @@ Encoding Type:  One-Hot
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
-; n              ; 4     ; Signed Integer                                     ;
+; n              ; 16    ; Signed Integer                                     ;
 ; CLKS_PER_BIT   ; 434   ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -325,7 +349,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------+
 ; Parameter Name ; Value ; Type                                        ;
 +----------------+-------+---------------------------------------------+
-; n              ; 4     ; Signed Integer                              ;
+; n              ; 16    ; Signed Integer                              ;
 ; clks_per_bit   ; 434   ; Signed Integer                              ;
 +----------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -346,24 +370,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 34                          ;
-; cycloneiii_ff         ; 178                         ;
+; boundary_port         ; 118                         ;
+; cycloneiii_ff         ; 370                         ;
 ;     CLR               ; 21                          ;
-;     ENA               ; 33                          ;
-;     ENA CLR           ; 93                          ;
+;     ENA               ; 129                         ;
+;     ENA CLR           ; 189                         ;
 ;     ENA CLR SCLR      ; 31                          ;
-; cycloneiii_lcell_comb ; 343                         ;
+; cycloneiii_lcell_comb ; 634                         ;
 ;     arith             ; 90                          ;
 ;         2 data inputs ; 90                          ;
-;     normal            ; 253                         ;
+;     normal            ; 544                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 55                          ;
-;         3 data inputs ; 56                          ;
-;         4 data inputs ; 134                         ;
+;         1 data inputs ; 19                          ;
+;         2 data inputs ; 89                          ;
+;         3 data inputs ; 98                          ;
+;         4 data inputs ; 337                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 4.12                        ;
+; Average LUT depth     ; 3.96                        ;
 +-----------------------+-----------------------------+
 
 
@@ -382,7 +406,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed May 30 01:00:05 2018
+    Info: Processing started: Wed May 30 01:14:17 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off n-byte_uart -c n-byte_uart
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -434,6 +458,102 @@ Info (10041): Inferred latch for "dout_prev_c[28]" at UART_nByte.vhd(66) File: D
 Info (10041): Inferred latch for "dout_prev_c[29]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
 Info (10041): Inferred latch for "dout_prev_c[30]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
 Info (10041): Inferred latch for "dout_prev_c[31]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[32]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[33]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[34]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[35]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[36]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[37]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[38]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[39]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[40]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[41]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[42]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[43]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[44]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[45]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[46]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[47]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[48]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[49]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[50]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[51]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[52]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[53]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[54]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[55]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[56]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[57]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[58]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[59]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[60]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[61]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[62]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[63]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[64]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[65]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[66]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[67]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[68]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[69]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[70]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[71]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[72]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[73]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[74]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[75]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[76]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[77]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[78]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[79]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[80]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[81]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[82]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[83]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[84]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[85]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[86]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[87]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[88]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[89]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[90]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[91]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[92]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[93]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[94]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[95]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[96]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[97]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[98]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[99]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[100]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[101]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[102]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[103]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[104]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[105]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[106]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[107]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[108]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[109]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[110]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[111]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[112]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[113]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[114]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[115]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[116]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[117]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[118]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[119]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[120]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[121]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[122]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[123]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[124]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[125]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[126]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
+Info (10041): Inferred latch for "dout_prev_c[127]" at UART_nByte.vhd(66) File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 66
 Info (12128): Elaborating entity "UART_R" for hierarchy "UART_nByte:UART_nByte_i|UART_R:UART_R_i" File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 120
 Info (12128): Elaborating entity "leddcd" for hierarchy "leddcd:\LED_gen:0:leddcd_i" File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/Quartus/UART_N/n_byte_uart.vhd Line: 94
 Info (13000): Registers with preset signals will power-up high File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_nByte.vhd Line: 52
@@ -445,17 +565,17 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register UART_nByte:UART_nByte_i|UART_R:UART_R_i|index[2] will power up to Low File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_R.vhd Line: 38
     Critical Warning (18010): Register UART_nByte:UART_nByte_i|UART_R:UART_R_i|index[1] will power up to Low File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_R.vhd Line: 38
     Critical Warning (18010): Register UART_nByte:UART_nByte_i|UART_R:UART_R_i|index[0] will power up to Low File: D:/Drew/Northwestern/EECS392/Project/EECS-392-IK/vhdl/serial/UART_R.vhd Line: 38
-Info (17049): 32 registers lost all their fanouts during netlist optimizations.
+Info (17049): 128 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 433 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 988 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 31 output pins
-    Info (21061): Implemented 399 logic cells
+    Info (21059): Implemented 115 output pins
+    Info (21061): Implemented 870 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4794 megabytes
-    Info: Processing ended: Wed May 30 01:00:20 2018
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Wed May 30 01:14:34 2018
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:34
 
 
