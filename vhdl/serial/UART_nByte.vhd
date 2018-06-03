@@ -54,6 +54,7 @@ begin
         bytes <= (others => '0');
         valid <= '0';
         count <= n;
+        dout_prev <= (others => '0');
       elsif (rising_edge(clk)) then
         curr_state <= next_state;
         bytes <= bytes_c;
@@ -78,6 +79,7 @@ begin
       valid_c <= valid;
       count_c <= count;
       next_state <= curr_state;
+      dout_prev_c <= dout_prev;
       case (curr_state) is
         when (idle) =>
           if (RX_DV = '1') then
