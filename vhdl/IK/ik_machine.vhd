@@ -83,31 +83,27 @@ begin
   end process;
 
   comb_proc : process(current_s, pulse, destx, desty) is
-    variable delta_e, alpha_theta, next_theta : std_logic_vector(95 downto 0);
-    variable a, alpha_vec : vec_3;
+    variable delta_e : std_logic_vector(95 downto 0);
+    variable a, alpha_vec, next_theta, alpha_theta : vec_3;
   begin
-    next_s <= current_s;
-    next_previous_s <= previous_s;
-
-    a0_i_c <= a0_i;
-    a1_i_c <= a1_i;
-    a2_i_c <= a2_i;
-    --ei_c <= ei;
-    --p1_c <= p1;
-    --p2_c <= p2;
-
-    e_j_c <= e_j;
-    p1_j_c <= p1_j;
-    p2_j_c <= p2_j;
-    --jac_c <= jac;
-
-    jac_mul_c <= jac_mul;
-    delta_e_s_c <= delta_e_s;
-    --delta_theta_c <= delta_theta;
-
-    a0_o_c <= a0_o;
-    a1_o_c <= a1_o;
-    a2_o_c <= a2_o;
+      next_s <= current_s;
+      next_previous_s <= previous_s;
+      --ei_c <= ei;
+      --p1_c <= p1;
+      --p2_c <= p2;
+      e_j_c <= e_j;
+      p1_j_c <= p1_j;
+      p2_j_c <= p2_j;
+      --jac_c <= jac;
+      jac_mul_c <= jac_mul;
+      delta_e_s_c <= delta_e_s;
+      --delta_theta_c <= delta_theta;
+      a0_i_c <= a0_i;
+      a1_i_c <= a1_i;
+      a2_i_c <= a2_i;
+      a0_o_c <= a0_o;
+      a1_o_c <= a1_o;
+      a2_o_c <= a2_o;
 
     a0_e_c <= a0_e;
     a1_e_c <= a1_e;
@@ -120,16 +116,6 @@ begin
     dest_c(95 downto 64) <= destx;
     dest_c(63 downto 32) <= desty;
     dest_c(31 downto 0) <= (others => '0');
-
-
-    if (dest(95 downto 64) /= destx or dest(63 downto 32) /= desty) then
-      a0_i_c <= "00000000000000011001001000011111";
-      a1_i_c <= "00000000000000000000000000000000";
-      a2_i_c <= "00000000000000000000000000000000";
-      a0_o_c <= "00000000000000011001001000011111";
-      a1_o_c <= "00000000000000000000000000000000";
-      a2_o_c <= "00000000000000000000000000000000";
-    end if;
 
     case(current_s) is
       when idle =>
@@ -175,17 +161,21 @@ begin
 
       when computeAOut =>
         next_previous_s <= computeAOut;
-        alpha_vec(0) := ALPHA;
-        alpha_vec(1) := ALPHA;
-        alpha_vec(2) := ALPHA;
-        alpha_theta := vec_3_to_slv(vec_3_mul(slv_to_vec_3(delta_theta),alpha_vec));
+        --alpha_vec(0) := ALPHA;
+        --alpha_vec(1) := ALPHA;
+        --alpha_vec(2) := ALPHA;
+        --alpha_theta := vec_3_mul(slv_to_vec_3(delta_theta),alpha_vec);
+        alpha_theta := vec_3_srl(slv_to_vec_3(delta_theta), 14);
         a(0) := a0_i;
         a(1) := a1_i;
         a(2) := a2_i;
-        next_theta := vec_3_to_slv(vec_3_add(slv_to_vec_3(alpha_theta), a));
-        a0_o_c <= next_theta(95 downto 64);
-        a1_o_c <= next_theta(63 downto 32);
-        a2_o_c <= next_theta(31 downto 0);
+        next_theta := vec_3_add(alpha_theta, a);
+        a0_o_c <= next_theta(0);
+        a1_o_c <= next_theta(1);
+        a2_o_c <= next_theta(2);
+        a0_e_c <= a0_o;
+        a1_e_c <= a1_o;
+        a2_e_c <= a2_o;
         next_s <= waitOnPulseLow;
 
       when updateAngle =>
@@ -217,6 +207,7 @@ begin
       when others =>
         next_s <= idle;
     end case;
+
   end process;
 
   fk_comb_i : fk_comb

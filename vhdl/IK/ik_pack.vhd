@@ -4,9 +4,9 @@ use IEEE.numeric_std.all;
 
 package ik_pack is
   constant TWO_PI : std_logic_vector(31 downto 0) := "00000000000001100100100001111110";
-  constant L0 : std_logic_vector(31 downto 0) := "00000000011010001100011001100110";
-  constant L1 : std_logic_vector(31 downto 0) := "00000000011000100110110011001100";
-  constant L2 : std_logic_vector(31 downto 0) := "00000000101010110111001100110011";
+  constant L0 : std_logic_vector(31 downto 0) := "00000000000110100011000110011001";
+  constant L1 : std_logic_vector(31 downto 0) := "00000000000110001001101100110011";
+  constant L2 : std_logic_vector(31 downto 0) := "00000000001010101101110011001100";
   constant MAX_PULSE : std_logic_vector(35 downto 0) := "011110100001001000000000000000000000";
   constant MIN_PULSE : std_logic_vector(35 downto 0) := "000110000110101000000000000000000000";
   constant ALPHA : std_logic_vector(31 downto 0) := "00000000000000000000000000000001";
@@ -36,6 +36,8 @@ package ik_pack is
   function vec_3_add (v1 : vec_3; v2 : vec_3)
                        return vec_3;
   function vec_3_mul (v1 : vec_3; v2 : vec_3)
+                       return vec_3;
+  function vec_3_srl (v1 : vec_3; x : integer)
                        return vec_3;
   function rads_to_brads (rads : std_logic_vector(31 downto 0))
                        return signed;
@@ -349,10 +351,27 @@ begin
   return vout;
 end vec_3_mul;
 
+function vec_3_srl (v1 : vec_3; x : integer)
+                     return vec_3 is
+  variable vout : vec_3;
+begin
+  vout(0) := std_logic_vector(resize(signed(resize(unsigned(signed(v1(0)) SRL x),(32-x))),32));
+  vout(1) := std_logic_vector(resize(signed(resize(unsigned(signed(v1(1)) SRL x),(32-x))),32));
+  vout(2) := std_logic_vector(resize(signed(resize(unsigned(signed(v1(2)) SRL x),(32-x))),32));
+  return vout;
+end vec_3_srl;
+
+
 function rads_to_brads (rads : std_logic_vector(31 downto 0))
                      return signed is
+  variable to_brads : std_logic_vector(31 downto 0);
 begin
-  return signed( resize((((resize(signed(rads),48) SLL 16) / signed(TWO_PI)) SLL 16),32));
+  --if(signed(rads) < 0) then
+  --  to_brads := std_logic_vector(signed(rads)+signed(TWO_PI));
+  --else
+    to_brads := rads;
+  --end if;
+  return signed( resize(unsigned(((resize(signed(to_brads),48) SLL 16) / signed(TWO_PI)) SLL 16),32));
 end rads_to_brads;
 
 function rads_to_pulse (rads : std_logic_vector(31 downto 0))

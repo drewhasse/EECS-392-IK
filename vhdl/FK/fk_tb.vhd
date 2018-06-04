@@ -24,10 +24,12 @@ architecture behavioral of fk_tb is
 
 begin
 
-  reset_tb <= '0';
-  a0_tb <= "00000000000000011001001000011111";
-  a1_tb <= "00000000000000011001001000011111";
-  a2_tb <= "00000000000000011001001000011111";
+  a0_tb <= x"0001b47a";
+  a1_tb <= x"00003c8c";
+  a2_tb <= x"ffffd526";
+  --a0_tb <= x"00000000";
+  --a1_tb <= "11111111111111100110110111100000";
+  --a2_tb <= x"00000000";
 
   fk_comb_i : fk_comb
   port map (
@@ -47,9 +49,9 @@ begin
   clock_generate: process is
     begin
       clk_tb <= '0';
-      wait for 1 ns;
+      wait for 10 ns;
       clk_tb <= not clk_tb;
-      wait for 1 ns;
+      wait for 10 ns;
       if hold = '1' then
         wait;
       end if;
@@ -57,7 +59,10 @@ begin
 
   stop_clk : process is
     begin
-      wait for 1 ms;
+      reset_tb <= '1';
+      wait for 20 ns;
+      reset_tb <= '0';
+      wait for 10 ms;
       hold <= '1';
       wait;
   end process;

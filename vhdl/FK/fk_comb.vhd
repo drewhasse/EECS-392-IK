@@ -56,7 +56,7 @@ vec_origin <= (16 => '1', others => '0');
   sincos_a0 : sincos_pipelined
   generic map (
     SIZE               => 32,
-    ITERATIONS         => 10,
+    ITERATIONS         => 25,
     FRAC_BITS          => 16
   )
   port map (
@@ -70,7 +70,7 @@ vec_origin <= (16 => '1', others => '0');
   sincos_a1 : sincos_pipelined
   generic map (
     SIZE               => 32,
-    ITERATIONS         => 10,
+    ITERATIONS         => 25,
     FRAC_BITS          => 16
   )
   port map (
@@ -84,7 +84,7 @@ vec_origin <= (16 => '1', others => '0');
   sincos_a2 : sincos_pipelined
   generic map (
     SIZE               => 32,
-    ITERATIONS         => 10,
+    ITERATIONS         => 25,
     FRAC_BITS          => 16
   )
   port map (

@@ -31,19 +31,19 @@ end component mat_3x1;
     variable temp_l : mat_3;
     variable temp_r : vec_3;
     begin
-      temp_l(0)(0) := (0=>'1', others => '0');
-      temp_l(0)(1) := (0=>'1', others => '0');
-      temp_l(0)(2) := (0=>'1', others => '0');
-      temp_l(1)(0) := (0=>'1', others => '0');
-      temp_l(1)(1) := (0=>'1', others => '0');
-      temp_l(1)(2) := (0=>'1', others => '0');
-      temp_l(2)(0) := (0=>'1', others => '0');
-      temp_l(2)(1) := (0=>'1', others => '0');
-      temp_l(2)(2) := (0=>'1', others => '0');
+      temp_l(0)(0) := x"ffff0000";
+      temp_l(0)(1) := x"ffff0000";
+      temp_l(0)(2) := x"ffff0000";
+      temp_l(1)(0) := x"ffff0000";
+      temp_l(1)(1) := x"ffff0000";
+      temp_l(1)(2) := x"ffff0000";
+      temp_l(2)(0) := x"ffff0000";
+      temp_l(2)(1) := x"ffff0000";
+      temp_l(2)(2) := x"ffff0000";
 
-      temp_r(0) := (0=>'1', others =>'0');
-      temp_r(1) := (0=>'1', others =>'0');
-      temp_r(2) := (0=>'1', others =>'0');
+      temp_r(0) := x"00010000";
+      temp_r(1) := x"00010000";
+      temp_r(2) := x"00010000";
 
       mat_3_l_in_tb <= mat_3_to_slv(temp_l);
       vec_3_r_in_tb <= vec_3_to_slv(temp_r);
