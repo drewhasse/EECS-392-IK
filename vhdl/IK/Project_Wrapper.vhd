@@ -41,8 +41,8 @@ begin
   -- desty_s(15 downto 8) <= dout_s(55 downto 48);
   -- desty_s(23 downto 16) <= dout_s(47 downto 40);
   -- desty_s(31 downto 24) <= dout_s(39 downto 32);
-  destx_s <= x"00000000"; --dout_s(num_bytes*8-1 downto num_bytes*8-32);
-  desty_s <= x"000001F4";--dout_s(num_bytes*8-33 downto num_bytes*8-64);
+  destx_s <= dout_s(num_bytes*8-1 downto num_bytes*8-32);
+  desty_s <= dout_s(num_bytes*8-33 downto num_bytes*8-64);
   base_angle <= dout_s(num_bytes*8-65 downto num_bytes*8-96);
 --------------------------------------------------------
   UART_nByte_i : UART_nByte

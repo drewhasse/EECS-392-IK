@@ -86,6 +86,21 @@ begin
     variable delta_e : std_logic_vector(95 downto 0);
     variable a, alpha_vec, next_theta, alpha_theta : vec_3;
   begin
+    if (dest(95 downto 64) /= destx or dest(63 downto 32) /= desty) then
+      next_s <= idle;
+      next_previous_s <= idle;
+      e_j_c <= (others => '0');
+      p1_j_c <= (others => '0');
+      p2_j_c <= (others => '0');
+      jac_mul_c <= (others => '0');
+      delta_e_s_c <= (others => '0');
+      a0_i_c <= "00000000000000011001001000011111";
+      a1_i_c <= "00000000000000000000000000000000";
+      a2_i_c <= "00000000000000000000000000000000";
+      a0_o_c <= "00000000000000011001001000011111";
+      a1_o_c <= "00000000000000000000000000000000";
+      a2_o_c <= "00000000000000000000000000000000";
+    else
       next_s <= current_s;
       next_previous_s <= previous_s;
       --ei_c <= ei;
@@ -104,6 +119,7 @@ begin
       a0_o_c <= a0_o;
       a1_o_c <= a1_o;
       a2_o_c <= a2_o;
+    end if;
 
     a0_e_c <= a0_e;
     a1_e_c <= a1_e;
@@ -165,7 +181,7 @@ begin
         --alpha_vec(1) := ALPHA;
         --alpha_vec(2) := ALPHA;
         --alpha_theta := vec_3_mul(slv_to_vec_3(delta_theta),alpha_vec);
-        alpha_theta := vec_3_srl(slv_to_vec_3(delta_theta), 14);
+        alpha_theta := vec_3_srl(slv_to_vec_3(delta_theta), 12);
         a(0) := a0_i;
         a(1) := a1_i;
         a(2) := a2_i;

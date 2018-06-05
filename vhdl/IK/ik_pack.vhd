@@ -4,9 +4,9 @@ use IEEE.numeric_std.all;
 
 package ik_pack is
   constant TWO_PI : std_logic_vector(31 downto 0) := "00000000000001100100100001111110";
-  constant L0 : std_logic_vector(31 downto 0) := "00000000000110100011000110011001";
-  constant L1 : std_logic_vector(31 downto 0) := "00000000000110001001101100110011";
-  constant L2 : std_logic_vector(31 downto 0) := "00000000001010101101110011001100";
+  constant L0 : std_logic_vector(31 downto 0) := "00000000000001101000110001100110";
+  constant L1 : std_logic_vector(31 downto 0) := "00000000000001100010011011001100";
+  constant L2 : std_logic_vector(31 downto 0) := "00000000000010101011011100110011";
   constant MAX_PULSE : std_logic_vector(35 downto 0) := "011110100001001000000000000000000000";
   constant MIN_PULSE : std_logic_vector(35 downto 0) := "000110000110101000000000000000000000";
   constant ALPHA : std_logic_vector(31 downto 0) := "00000000000000000000000000000001";
