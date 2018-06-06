@@ -189,9 +189,6 @@ begin
         a0_o_c <= next_theta(0);
         a1_o_c <= next_theta(1);
         a2_o_c <= next_theta(2);
-        a0_e_c <= a0_o;
-        a1_e_c <= a1_o;
-        a2_e_c <= a2_o;
         next_s <= waitOnPulseLow;
 
       when updateAngle =>
