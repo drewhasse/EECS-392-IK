@@ -181,7 +181,7 @@ begin
         --alpha_vec(1) := ALPHA;
         --alpha_vec(2) := ALPHA;
         --alpha_theta := vec_3_mul(slv_to_vec_3(delta_theta),alpha_vec);
-        alpha_theta := vec_3_srl(slv_to_vec_3(delta_theta), 8);
+        alpha_theta := vec_3_srl(slv_to_vec_3(delta_theta), 11);
         a(0) := a0_i;
         a(1) := a1_i;
         a(2) := a2_i;
@@ -211,7 +211,7 @@ begin
         end if;
 
       when waitforinput =>
-        if (abs(signed(dest(95 downto 64)) - signed(destx)) > signed'(x"00005000") or abs(signed(dest(63 downto 32)) - signed(desty)) > signed'(x"00005000")) then
+        if (abs(signed(dest(95 downto 64)) - signed(destx)) > signed'(x"00001000") or abs(signed(dest(63 downto 32)) - signed(desty)) > signed'(x"00001000")) then
           next_s <= idle;
         else
           next_s <= waitforinput;
