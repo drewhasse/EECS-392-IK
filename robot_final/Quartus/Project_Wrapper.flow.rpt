@@ -1,5 +1,5 @@
 Flow report for Project_Wrapper
-Wed Jun 06 19:08:09 2018
+Thu Jun 07 01:30:07 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Jun 06 19:08:08 2018       ;
+; Flow Status                     ; Successful - Thu Jun 07 01:30:05 2018       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Project_Wrapper                             ;
 ; Top-level Entity Name           ; Project_Wrapper                             ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2018 19:06:31 ;
+; Start date & time ; 06/07/2018 01:28:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Project_Wrapper     ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 275262062997362.152832999112088        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 275262062997362.152835291110476        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -94,8 +94,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:30     ; 1.0                     ; 5154 MB             ; 00:01:44                           ;
-; Total                ; 00:01:30     ; --                      ; --                  ; 00:01:44                           ;
+; Analysis & Synthesis ; 00:01:26     ; 1.0                     ; 5157 MB             ; 00:01:35                           ;
+; Total                ; 00:01:26     ; --                      ; --                  ; 00:01:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
