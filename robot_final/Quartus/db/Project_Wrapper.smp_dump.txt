@@ -1,0 +1,37 @@
+
+State Machine - |Project_Wrapper|ik_machine:ik_machine_i|previous_s
+Name previous_s.waitforinput previous_s.waitOnPulseLow previous_s.updateAngle previous_s.computeAOut previous_s.computeDTheta previous_s.computeJac previous_s.computeFK previous_s.idle 
+previous_s.idle 0 0 0 0 0 0 0 0 
+previous_s.computeFK 0 0 0 0 0 0 1 1 
+previous_s.computeJac 0 0 0 0 0 1 0 1 
+previous_s.computeDTheta 0 0 0 0 1 0 0 1 
+previous_s.computeAOut 0 0 0 1 0 0 0 1 
+previous_s.updateAngle 0 0 1 0 0 0 0 1 
+previous_s.waitOnPulseLow 0 1 0 0 0 0 0 1 
+previous_s.waitforinput 1 0 0 0 0 0 0 1 
+
+State Machine - |Project_Wrapper|ik_machine:ik_machine_i|current_s
+Name current_s.waitforinput current_s.waitOnPulseLow current_s.updateAngle current_s.computeAOut current_s.computeDTheta current_s.computeJac current_s.computeFK current_s.idle 
+current_s.idle 0 0 0 0 0 0 0 0 
+current_s.computeFK 0 0 0 0 0 0 1 1 
+current_s.computeJac 0 0 0 0 0 1 0 1 
+current_s.computeDTheta 0 0 0 0 1 0 0 1 
+current_s.computeAOut 0 0 0 1 0 0 0 1 
+current_s.updateAngle 0 0 1 0 0 0 0 1 
+current_s.waitOnPulseLow 0 1 0 0 0 0 0 1 
+current_s.waitforinput 1 0 0 0 0 0 0 1 
+
+State Machine - |Project_Wrapper|UART_nByte:UART_nByte_i|curr_state
+Name curr_state.done curr_state.shift curr_state.wait_for_byte curr_state.idle 
+curr_state.idle 0 0 0 0 
+curr_state.wait_for_byte 0 0 1 1 
+curr_state.shift 0 1 0 1 
+curr_state.done 1 0 0 1 
+
+State Machine - |Project_Wrapper|UART_nByte:UART_nByte_i|UART_R:UART_R_i|curr_state
+Name curr_state.stp_hold curr_state.stp curr_state.data curr_state.start curr_state.idle 
+curr_state.idle 0 0 0 0 0 
+curr_state.start 0 0 0 1 1 
+curr_state.data 0 0 1 0 1 
+curr_state.stp 0 1 0 0 1 
+curr_state.stp_hold 1 0 0 0 1 
